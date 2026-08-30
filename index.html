@@ -96,6 +96,18 @@ code, .mono { font-family: Consolas, "Courier New", Courier, monospace; }
   animation: fade .35s ease;
 }
 .slide.active { display: block; }
+.slide.dense { padding-top: 3.2rem; }
+.slide.dense h2 { margin-bottom: 1.1rem; }
+.slide.dense .card { padding: 1.05rem 1.15rem; border-radius: 14px; }
+.slide.dense .card p { font-size: .87rem; line-height: 1.5; }
+.slide.dense .card .ico { font-size: 1.15rem; margin-bottom: .35rem; }
+.slide.dense h3 { font-size: .98rem; margin-bottom: .35rem; }
+.slide.dense .grid { gap: .85rem; }
+.slide.dense .mt-l { margin-top: 1.5rem; }
+.slide.dense .lead { font-size: 1rem; }
+.slide.dense .band { padding: .8rem 1.15rem; gap: 1rem; }
+.slide.dense .band .d { font-size: .8rem; line-height: 1.4; }
+.slide.dense .funnel { gap: .6rem; }
 @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
 .wrap { max-width: 1180px; margin: 0 auto; }
@@ -417,7 +429,7 @@ kbd {
   </section>
 
   <!-- 5 · WHAT'S BUILT — PRODUCT -->
-  <section class="slide">
+  <section class="slide dense">
     <div class="wrap">
       <div class="eyebrow">What's built so far · product</div>
       <h2>Shipped and in production at<br><span style="color:var(--cp-accent)">vroomstocks.com</span></h2>
@@ -447,7 +459,7 @@ kbd {
           <p>Fund detail with holdings look-through, AMFI NAV data, and <strong>CAS import</strong> so an investor's real portfolio lands in the tool in one step.</p>
         </div>
         <div class="card">
-          <span class="ico">🇮🇳</span><h3>India depth</h3>
+          <span class="ico">🌏</span><h3>India depth</h3>
           <p>NSE option chains, exchange announcements, insider trading and shareholding-pattern data — the India-specific surfaces generic tools skip.</p>
         </div>
         <div class="card">
@@ -542,7 +554,7 @@ kbd {
   </section>
 
   <!-- 8 · MARKET -->
-  <section class="slide">
+  <section class="slide dense">
     <div class="wrap">
       <div class="eyebrow">Market · India</div>
       <h2>TAM / SAM / SOM</h2>
@@ -742,8 +754,16 @@ kbd {
     x0 = null;
   }, { passive: true });
 
-  const start = parseInt((location.hash || "").slice(1), 10);
-  go(Number.isFinite(start) && start > 0 ? start - 1 : 0);
+  function fromHash() {
+    const n = parseInt((location.hash || "").slice(1), 10);
+    return Number.isFinite(n) && n > 0 ? n - 1 : 0;
+  }
+  window.addEventListener("hashchange", () => {
+    const n = fromHash();
+    if (n !== i) go(n);
+  });
+
+  go(fromHash());
 })();
 </script>
 </body>
