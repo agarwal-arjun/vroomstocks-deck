@@ -16,7 +16,7 @@ An HTML presentation covering VroomStocks: vision, product, roadmap, market and 
 | 4 | What is VroomStocks |
 | 5 | What's built — product |
 | 6 | What's built — under the hood |
-| 7 | Roadmap — alerts & newsletters, broker integration, algo trading, VroomAI, enterprise APIs |
+| 7 | Roadmap — SEBI Research Analyst licence, alerts & newsletters, broker integration, algo trading, VroomAI, enterprise APIs |
 | 8 | Market — TAM / SAM / SOM (India) |
 | 9 | Who we are — Arjun Agarwal & Krati Mittal |
 | 10 | The ask — commercial collaboration & join us |

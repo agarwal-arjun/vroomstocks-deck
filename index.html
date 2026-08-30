@@ -288,6 +288,45 @@ kbd {
   font-size: .72rem;
 }
 
+/* ---------- Short viewports (laptops / projectors) ---------- */
+@media (min-width: 901px) and (max-height: 850px) {
+  .slide { padding: 3rem 3.2rem 4.6rem; }
+  h1 { font-size: clamp(1.9rem, 4.2vw, 3.2rem); }
+  h2 { font-size: clamp(1.45rem, 2.7vw, 2.05rem); margin-bottom: 1rem; }
+  h3 { font-size: .95rem; margin-bottom: .3rem; }
+  .lead { font-size: .98rem; }
+  .small { font-size: .78rem; }
+  .card { padding: 1rem 1.1rem; border-radius: 14px; }
+  .card p { font-size: .86rem; line-height: 1.45; }
+  .card .ico { font-size: 1.1rem; margin-bottom: .3rem; }
+  .grid { gap: .8rem; }
+  .mt { margin-top: 1.2rem; }
+  .mt-l { margin-top: 1.35rem; }
+  ul.check li { font-size: .88rem; margin-bottom: .45rem; }
+  .rail .node { margin-bottom: .78rem; }
+  .funnel { gap: .55rem; }
+  .band { padding: .7rem 1.1rem; }
+  .band .d { font-size: .77rem; line-height: 1.38; }
+  .stat .num { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+  .stat .lbl { font-size: .76rem; }
+  .avatar { width: 2.6rem; height: 2.6rem; margin-bottom: .6rem; }
+  .person .nm { font-size: 1.2rem; }
+  /* the two densest slides need a further step down at this height */
+  .slide.dense { padding-top: 2.7rem; }
+  .slide.dense h2 { margin-bottom: .8rem; }
+  .slide.dense h3 { font-size: .9rem; }
+  .slide.dense .lead { font-size: .92rem; }
+  .slide.dense .card { padding: .85rem 1rem; }
+  .slide.dense .card p { font-size: .8rem; line-height: 1.42; }
+  .slide.dense .card .ico { font-size: 1rem; margin-bottom: .25rem; }
+  .slide.dense .grid { gap: .7rem; }
+  .slide.dense .mt-l { margin-top: .9rem; }
+  .slide.dense .funnel { gap: .45rem; }
+  .slide.dense .band { padding: .52rem 1rem; }
+  .slide.dense .band .v { font-size: clamp(1rem, 1.9vw, 1.4rem); }
+  .slide.dense .band .d { font-size: .73rem; line-height: 1.32; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .slide { padding: 3.6rem 1.25rem 5rem; }
@@ -521,32 +560,37 @@ kbd {
             <p class="small">Multi-market fundamentals, filings, valuation, technicals, screeners, mutual funds, portfolio, AI insight.</p>
           </div>
           <div class="node">
-            <h3>1 · Alerts &amp; Newsletters</h3>
+            <h3>1 · SEBI Research Analyst licence</h3>
+            <p class="small">Register as a SEBI Research Analyst. This is the regulatory foundation: it is what lets VroomStocks publish research, ratings and recommendations rather than data alone — and it is the compliance moat that separates a licensed platform from the finfluencer channel SEBI is actively closing.</p>
+          </div>
+          <div class="node">
+            <h3>2 · Alerts &amp; Newsletters</h3>
             <p class="small">Turn the platform from pull to push. Price, fundamental, filing and shareholding triggers; a personalised research digest per user and per watchlist. The engagement and retention layer — and the top of the acquisition funnel.</p>
           </div>
           <div class="node">
-            <h3>2 · Broker integration</h3>
+            <h3>3 · Broker integration</h3>
             <p class="small">Live holdings and order placement through Indian broker APIs. Closes the loop between analysis and action, and makes the portfolio real-time instead of imported.</p>
-          </div>
-          <div class="node">
-            <h3>3 · Algorithmic trading</h3>
-            <p class="small">Promote the existing strategy engine and backtester into live, rule-based execution — systematic strategies an individual can author, test and deploy without writing code.</p>
           </div>
         </div>
         <div class="rail">
           <div class="node">
-            <h3>4 · VroomAI</h3>
+            <h3>4 · Algorithmic trading</h3>
+            <p class="small">Promote the existing strategy engine and backtester into live, rule-based execution — systematic strategies an individual can author, test and deploy without writing code.</p>
+          </div>
+          <div class="node">
+            <h3>5 · VroomAI</h3>
             <p class="small">A research analyst that answers in natural language over the full, structured corpus — filings, financials, holdings, announcements — with every claim cited to its source. Not a chatbot bolted on; an agent over a database we already own.</p>
           </div>
           <div class="node">
-            <h3>5 · Enterprise APIs</h3>
+            <h3>6 · Enterprise APIs</h3>
             <p class="small">Sell the normalised India+US fundamental, filing and fund data as an API to RIAs, wealth platforms, fintechs and broker apps. B2B revenue on infrastructure already built for B2C.</p>
           </div>
           <div class="card accent mt">
             <h3>Why this order</h3>
-            <p class="mt-s">Each step monetises the previous one's asset. Alerts create habit;
-            brokers create transaction value; algo creates stickiness; VroomAI creates differentiation;
-            enterprise APIs turn the data platform into a second, higher-margin business.</p>
+            <p class="mt-s">The licence unlocks what we are allowed to say; each step after it monetises
+            the previous one's asset. Alerts create habit; brokers create transaction value; algo creates
+            stickiness; VroomAI creates differentiation; enterprise APIs turn the data platform into a
+            second, higher-margin business.</p>
           </div>
         </div>
       </div>
