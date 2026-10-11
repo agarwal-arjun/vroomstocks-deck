@@ -19,9 +19,10 @@ An HTML presentation covering VroomStocks: vision, product, roadmap, market and 
 | 7 | What's built — under the hood |
 | 8 | Roadmap — newsletters & alert expansion, broker integration, VroomAI, algo trading, portfolio import/analysis/insights, enterprise APIs |
 | 9 | Market — TAM / SAM / SOM (India) |
-| 10 | Who we are — Arjun Agarwal & Krati Mittal |
-| 11 | The ask — commercial collaboration & join us |
-| 12 | Close |
+| 10 | Competitor analysis — Screener.in, Trendlyne, Tickertape, Fiscal.ai, TradingView and VroomStocks |
+| 11 | Who we are — Arjun Agarwal & Krati Mittal |
+| 12 | The ask — commercial collaboration & join us |
+| 13 | Close |
 
 ## Usage
 
@@ -50,6 +51,22 @@ Fundamental charts could not be captured successfully because the live applicati
 reported a market-mismatch error; no mockup was substituted.
 
 ## Notes on the numbers
+
+Slide 10 compares coverage, pricing, specific research/AI and portfolio/strategy
+features, founding/launch milestones, funding, revenue, DAU and MAU. Source links and
+expandable methodology are on-slide, checked 11 October 2026. On small screens, the
+comparison table scrolls horizontally; focus it to use arrow keys without changing slides.
+
+Funding figures are named historical rounds, not cumulative totals. Revenue includes
+the reporting year and entity; Tickertape's historical MAU is dated November 2021.
+`NV` means not verified in the cited public sources, not zero or necessarily undisclosed.
+VroomStocks' company/usage metrics were not provided. Founding years, product launches
+and rebrands are distinguished where known; Tickertape's conflicting histories are noted.
+Pricing is not a like-for-like entitlement comparison: Trendlyne uses an official
+help-page offer (checkout inaccessible), Fiscal.ai uses a disclosed affiliate's
+September 2026 review (official page inaccessible), and TradingView is an India offer.
+No traffic, registered-user counts, estimated revenue or parent-company metrics are
+substituted for DAU, MAU or standalone revenue.
 
 Market statistics on slides 3 and 9 are drawn from publicly reported CDSL/NSDL, NSE, AMFI and
 SEBI figures as of mid-2026. The TAM/SAM/SOM figures are a bottom-up estimate with the

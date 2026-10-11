@@ -277,6 +277,33 @@ ul.check li::before {
   .shot-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ---------- Competitor comparison ---------- */
+#competitor-analysis .wrap { max-width: 1440px; }
+.comparison-scroll { overflow-x: auto; border: 1px solid var(--cp-border); border-radius: 12px; }
+.comparison-table { width: 100%; min-width: 1080px; border-collapse: collapse; table-layout: fixed; font-size: .75rem; line-height: 1.3; }
+.comparison-table th, .comparison-table td { padding: .35rem .5rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--cp-border); }
+.comparison-table thead th { background: var(--cp-surface-soft); font-size: .83rem; }
+.comparison-table thead th:first-child { width: 10%; }
+.comparison-table tbody th { font-weight: 600; background: var(--cp-surface-soft); }
+.comparison-table td { color: var(--cp-text-muted); background: var(--cp-surface); }
+.comparison-table tr > :last-child { background: var(--cp-accent-soft); color: var(--cp-text); }
+.comparison-table tr:last-child > * { border-bottom: 0; }
+.comparison-table small { display: block; font-size: .68rem; color: var(--cp-text-soft); margin-top: .15rem; }
+.comparison-notes { margin-top: .65rem; font-size: .72rem; line-height: 1.45; }
+.comparison-sources { margin-top: .55rem; font-size: .78rem; color: var(--cp-text-muted); }
+.comparison-sources summary { cursor: pointer; color: var(--cp-link); }
+.comparison-sources p { font-size: .78rem; margin-top: .65rem; }
+#competitor-analysis .card { padding: .7rem .85rem; }
+@media (min-width: 901px) and (max-height: 850px) {
+  .comparison-table { font-size: .7rem; line-height: 1.3; }
+  .comparison-table th, .comparison-table td { padding: .25rem .4rem; }
+  .comparison-table small { font-size: .65rem; }
+}
+@media print {
+  .comparison-scroll { overflow: visible; }
+  .comparison-table { min-width: 0; font-size: .65rem; overflow-wrap: anywhere; }
+}
+
 /* ---------- Team ---------- */
 .person { display: flex; flex-direction: column; gap: .2rem; }
 .person .nm { font-size: 1.35rem; font-weight: 700; letter-spacing: -.02em; }
@@ -744,14 +771,142 @@ kbd {
       </div>
       <div class="grid g3 mt-l">
         <div class="card"><h3>Why now</h3><p>Retail participation has structurally re-rated post-2020, SEBI has tightened the finfluencer channel, and account aggregator + broker APIs have made integration cheap for the first time.</p></div>
-        <div class="card"><h3>Why us</h3><p>The multi-market data spine is already built and running. Competitors sell one market, one asset class, or one feature; VroomStocks joins fundamentals, filings, funds and valuation in one model.</p></div>
+        <div class="card"><h3>Why us</h3><p>The multi-market data spine is already built and running. VroomStocks combines fundamentals, filings, funds, valuation and simulation at an accessible price — our positioning is the integrated workflow, not exclusive ownership of any one feature.</p></div>
         <div class="card"><h3>Two revenue engines</h3><p>B2C subscriptions fund the product; B2B data APIs monetise the same infrastructure at far higher margin and much lower churn.</p></div>
       </div>
       <p class="small mt">Bottom-up model built on publicly reported CDSL/NSDL, NSE, AMFI and SEBI statistics (mid-2026). Ranges are estimates and assumptions are stated on-slide; they are not a forecast.</p>
     </div>
   </section>
 
-  <!-- 9 · TEAM -->
+  <!-- 10 · COMPETITOR ANALYSIS -->
+  <section class="slide dense" id="competitor-analysis">
+    <div class="wrap">
+      <div class="eyebrow">Competitive landscape · India + global</div>
+      <h2>VroomStocks: breadth at an accessible price.</h2>
+      <div class="comparison-scroll" role="region" aria-label="Competitor comparison; scroll horizontally on smaller screens" tabindex="0">
+        <table class="comparison-table" aria-label="Pricing, functionality, founding, funding, revenue and active users">
+          <thead>
+            <tr>
+              <th scope="col">Dimension</th>
+              <th scope="col">Screener.in<small>Indian competitor</small></th>
+              <th scope="col">Trendlyne<small>Indian competitor</small></th>
+              <th scope="col">Tickertape<small>Indian competitor</small></th>
+              <th scope="col">Fiscal.ai<small>Global · formerly FinChat</small></th>
+              <th scope="col">TradingView<small>Global competitor</small></th>
+              <th scope="col">VroomStocks<small>Our product</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Coverage</th>
+              <td>Indian equities</td>
+              <td>India; US on global plans</td>
+              <td>India stocks, MFs &amp; ETFs; US investing</td>
+              <td>Global equities, ETFs &amp; funds</td>
+              <td>Global stocks, FX, crypto &amp; futures</td>
+              <td><strong>India + US equities; Indian mutual funds</strong></td>
+            </tr>
+            <tr>
+              <th scope="row">Pricing</th>
+              <td>Free; <a href="https://www.screener.in/premium/" target="_blank" rel="noopener">₹4,999/year</a><small>Active Investor · GST included</small></td>
+              <td>Free; <a href="https://help.trendlyne.com/support/solutions/articles/84000352549-what-types-of-trendlyne-subscriptions-are-available-" target="_blank" rel="noopener">GuruQ ₹2,090/year*</a><small>India help-page offer; global plans cost more</small></td>
+              <td>Free; <a href="https://www.tickertape.in/pricing" target="_blank" rel="noopener">Pro ₹399/month</a><small>Monthly billing; annual offers available</small></td>
+              <td><a href="https://stocksimplifier.com/reviews/fiscal-ai" target="_blank" rel="noopener">Pro US$39/month*</a><small>US$468 billed yearly; reported Sep 2026</small></td>
+              <td>Free; <a href="https://www.tradingview.com/pricing/" target="_blank" rel="noopener">Essential ₹995/month*</a><small>₹11,940 billed yearly; India offer</small></td>
+              <td><strong><a href="https://vroomstocks.com/pricing" target="_blank" rel="noopener">Free; Advanced ₹999/365 days</a></strong><small>Or ₹99/30 days · GST included</small></td>
+            </tr>
+            <tr>
+              <th scope="row">Research &amp; AI</th>
+              <td>Custom ratios, screens, Excel automation, segment results, AI summaries</td>
+              <td>Stock scores, consensus estimates, screeners, stock insights &amp; alerts</td>
+              <td>Custom screens, analyst forecasts, scorecards, red flags &amp; sentiment</td>
+              <td>Segments/KPIs, transcripts, DCF &amp; reverse DCF, AI summaries; MCP add-on</td>
+              <td>Pine Script, 400+ indicators, financials, screeners &amp; technical alerts</td>
+              <td><strong>XBRL financials, Q-Score, adjustable DCF, AI insight &amp; earnings summaries</strong></td>
+            </tr>
+            <tr>
+              <th scope="row">Portfolio &amp; strategy</th>
+              <td>Watchlists, peer comparisons &amp; screen alerts</td>
+              <td>Portfolio tools, MF analytics &amp; screener backtesting</td>
+              <td>Multi-demat portfolio, diversification score &amp; personalised alerts</td>
+              <td>Broker-linked portfolios, fundamental comparisons &amp; valuation models</td>
+              <td>Portfolio tracking, strategy backtests, paper trading &amp; broker execution</td>
+              <td><strong>MF CAS import + holdings look-through; backtests, paper trading &amp; email alerts</strong></td>
+            </tr>
+            <tr>
+              <th scope="row">Founding / launch</th>
+              <td>2009<small>Platform founding</small></td>
+              <td><a href="https://inc42.com/company/trendlyne/financials/" target="_blank" rel="noopener">2017</a><small>Reported founding year</small></td>
+              <td><a href="https://economictimes.indiatimes.com/tech/startups/tickertape-lays-off-30-staff-may-fold-up-into-wealth-management-startup-smallcase/articleshow/99821589.cms" target="_blank" rel="noopener">2015; spin-off 2021</a><small>ET; histories differ</small></td>
+              <td><a href="https://dealroom.co/companies/finchat/" target="_blank" rel="noopener">Apr 2023 FinChat launch</a><small>Fiscal.ai rebrand: 2025</small></td>
+              <td><a href="https://www.disruptionbanking.com/2021/10/14/tradingview-hits-3-billion-valuation-with-298-million-investment/" target="_blank" rel="noopener">2011</a></td>
+              <td>Founding date not provided<small>Live product verified Oct 2026</small></td>
+            </tr>
+            <tr>
+              <th scope="row">Funding<small>Named rounds</small></th>
+              <td>NV</td>
+              <td><a href="https://entrackr.com/2022/10/iifl-fintech-fund-leads-1-8-mn-series-a-round-in-trendlyne/" target="_blank" rel="noopener">US$1.8m Series A</a><small>Oct 2022 · IIFL-led</small></td>
+              <td><a href="https://entrackr.com/2021/11/smallcase-invests-5-mn-in-tickertape/" target="_blank" rel="noopener">US$5m seed</a><small>Nov 2021 · smallcase</small></td>
+              <td><a href="https://tinyseed.com/latest/fiscal-ai-10m-future-ai-finance" target="_blank" rel="noopener">US$10m Series A</a><small>2025 · Portage-led</small></td>
+              <td><a href="https://www.disruptionbanking.com/2021/10/14/tradingview-hits-3-billion-valuation-with-298-million-investment/" target="_blank" rel="noopener">US$298m round</a><small>Oct 2021 · Tiger Global-led</small></td>
+              <td>Not provided</td>
+            </tr>
+            <tr>
+              <th scope="row">Revenue</th>
+              <td>NV</td>
+              <td><a href="https://inc42.com/company/trendlyne/financials/" target="_blank" rel="noopener">₹15.9 cr · FY25</a><small>Giskard Datatech; Inc42-reported</small></td>
+              <td>Standalone NV<small>Not smallcase revenue</small></td>
+              <td>NV</td>
+              <td>Group revenue NV</td>
+              <td>Not provided</td>
+            </tr>
+            <tr>
+              <th scope="row">DAU</th>
+              <td>NV</td><td>NV</td><td>NV</td><td>NV</td><td>NV</td><td>Not provided</td>
+            </tr>
+            <tr>
+              <th scope="row">MAU</th>
+              <td>NV</td>
+              <td>NV</td>
+              <td><a href="https://entrackr.com/2021/11/smallcase-invests-5-mn-in-tickertape/" target="_blank" rel="noopener">3m · Nov 2021</a><small>Historical reported MAU, not current</small></td>
+              <td>NV</td>
+              <td>NV<small>100m “traders” ≠ MAU</small></td>
+              <td>Not provided</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid g3 mt-s">
+        <div class="card accent"><h3>Accessible paid tier</h3><p>₹999/365 days plus a free tier. Lower listed entry cost; not equivalent feature or data entitlements.</p></div>
+        <div class="card accent"><h3>Research + funds + simulation</h3><p>India/US DCF, Indian fund look-through, CAS import and strategy testing in one workspace.</p></div>
+        <div class="card accent"><h3>Evidence before explanation</h3><p>Filing-derived numbers, editable DCF and AI summaries. Our positioning is the combination and price, not exclusive features.</p></div>
+      </div>
+      <p class="small comparison-notes">Checked 11 Oct 2026. <strong>NV</strong> = not verified in cited public sources, not zero. DAU/MAU ≠ visits or sign-ups. *Offer/snapshot pricing; see source notes for billing, tax and verification limits.</p>
+      <details class="comparison-sources">
+        <summary>Sources, scope and verification limits</summary>
+        <p><strong>Pricing and features:</strong> <a href="https://www.screener.in/premium/" target="_blank" rel="noopener">Screener Premium</a>;
+          <a href="https://help.trendlyne.com/support/solutions/articles/84000352549-what-types-of-trendlyne-subscriptions-are-available-" target="_blank" rel="noopener">Trendlyne official plan guide</a> and its pricing illustration (GuruQ ₹2,090/year offer; current checkout and tax not verified);
+          <a href="https://www.tickertape.in/pricing" target="_blank" rel="noopener">Tickertape pricing</a>;
+          <a href="https://stocksimplifier.com/reviews/fiscal-ai" target="_blank" rel="noopener">Stock Simplifier's Sep 2026 Fiscal.ai review</a> (affiliate and data customer; official pricing page blocked automated access; Pro $49 monthly or $468 yearly, tax extra);
+          <a href="https://www.tradingview.com/pricing/" target="_blank" rel="noopener">TradingView pricing</a> (India Essential offer, annual billing; tax and exchange data may be extra);
+          <a href="https://vroomstocks.com/pricing" target="_blank" rel="noopener">VroomStocks pricing</a> (GST-inclusive, one-time access; free tier has usage caps).
+          Feature lists describe selected capabilities, not exhaustive checklists or equivalent plan inclusions.</p>
+        <p><strong>Company metrics:</strong> <a href="https://tracxn.com/d/companies/screener/__Z8MxhVV5qz8JyPZYjpV5XBpqVfLr_zUXSNPxX2hfKTs" target="_blank" rel="noopener">Screener founding profile</a> (search-indexed; profile access restricted);
+          <a href="https://inc42.com/company/trendlyne/financials/" target="_blank" rel="noopener">Inc42 Trendlyne financials</a> (operator standalone revenue, FY ended March 2025);
+          <a href="https://entrackr.com/2022/10/iifl-fintech-fund-leads-1-8-mn-series-a-round-in-trendlyne/" target="_blank" rel="noopener">Trendlyne funding</a>;
+          <a href="https://entrackr.com/2021/11/smallcase-invests-5-mn-in-tickertape/" target="_blank" rel="noopener">Tickertape seed round and historical MAU</a>;
+          <a href="https://economictimes.indiatimes.com/tech/startups/tickertape-lays-off-30-staff-may-fold-up-into-wealth-management-startup-smallcase/articleshow/99821589.cms" target="_blank" rel="noopener">ET Tickertape founding history</a>.
+          ET reports 2015; Entrackr's 2021 report describes a two-and-a-half-year-old business, so founding and product-launch histories differ. The 2021 spin-off is separately identified.</p>
+        <p><strong>Global history:</strong> <a href="https://dealroom.co/companies/finchat/" target="_blank" rel="noopener">Dealroom FinChat launch history</a>;
+          <a href="https://tinyseed.com/latest/fiscal-ai-10m-future-ai-finance" target="_blank" rel="noopener">TinySeed Fiscal.ai funding announcement</a>;
+          <a href="https://ryanoconnellfinance.com/fiscal-ai-review/" target="_blank" rel="noopener">Fiscal.ai rebrand timeline</a>;
+          <a href="https://www.disruptionbanking.com/2021/10/14/tradingview-hits-3-billion-valuation-with-298-million-investment/" target="_blank" rel="noopener">TradingView 2021 financing announcement</a>.
+          TradingView's older “30m monthly users” and current “100m traders” claims are not presented as verified MAU. Funding rows name specific historical rounds, not cumulative totals or valuations. VroomStocks' founding, funding, revenue and active-user metrics were not supplied; no estimates are substituted.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 11 · TEAM -->
   <section class="slide">
     <div class="wrap">
       <div class="eyebrow">Who we are</div>
@@ -800,7 +955,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 10 · THE ASK -->
+  <!-- 12 · THE ASK -->
   <section class="slide">
     <div class="wrap">
       <div class="eyebrow">The ask</div>
@@ -836,7 +991,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 11 · CLOSE -->
+  <!-- 13 · CLOSE -->
   <section class="slide">
     <div class="wrap" style="display:flex;flex-direction:column;justify-content:center;min-height:70vh">
       <div class="eyebrow">Let's talk</div>
@@ -865,7 +1020,7 @@ kbd {
 <div class="hint"><kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>T</kbd> theme · <kbd>P</kbd> print</div>
 <div id="chrome">
   <button class="btn" id="prev" aria-label="Previous slide">←</button>
-  <span id="count">1 / 12</span>
+  <span id="count">1 / 13</span>
   <button class="btn" id="next" aria-label="Next slide">→</button>
   <button class="btn" id="theme" aria-label="Toggle theme">◐</button>
 </div>
@@ -928,6 +1083,7 @@ kbd {
 
   document.addEventListener("keydown", (e) => {
     if (screenshotDialog.open) return;
+    if (e.target.closest(".comparison-scroll, .comparison-sources")) return;
     if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); go(i + 1); }
     else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(i - 1); }
     else if (e.key === "Home") { e.preventDefault(); go(0); }
@@ -937,7 +1093,10 @@ kbd {
   });
 
   let x0 = null;
-  document.addEventListener("touchstart", (e) => { x0 = screenshotDialog.open ? null : e.changedTouches[0].clientX; }, { passive: true });
+  document.addEventListener("touchstart", (e) => {
+    x0 = screenshotDialog.open || e.target.closest(".comparison-scroll, .comparison-sources")
+      ? null : e.changedTouches[0].clientX;
+  }, { passive: true });
   document.addEventListener("touchend", (e) => {
     if (screenshotDialog.open) { x0 = null; return; }
     if (x0 === null) return;
