@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VroomStocks — Democratising Investment Analysis</title>
-<meta name="description" content="VroomStocks — an equity and mutual-fund research platform for India and the US. Vision, product, roadmap, market and team.">
+<meta name="description" content="Research stocks. Understand your funds. Track what changes. VroomStocks customer journeys, traction, pricing, roadmap and market scenarios.">
 <meta property="og:title" content="VroomStocks — Democratising Investment Analysis">
-<meta property="og:description" content="Institutional-grade investment analysis for every investor. Product, roadmap, market and team.">
+<meta property="og:description" content="India and US equity research, Indian mutual funds, valuation and monitoring in one affordable workspace.">
 <meta property="og:type" content="website">
 <script>
   (() => {
@@ -269,6 +269,10 @@ ul.check li::before {
   font-weight: 600;
   color: var(--cp-text);
 }
+.journey-grid .shot-card img { height: 230px; object-fit: contain; background: var(--cp-surface); }
+.journey-grid .shot-card .shot-cap { font-size: .85rem; }
+.journey-grid p { margin-top: .8rem; font-size: .9rem; }
+.journey-grid > div { min-width: 0; }
 @media (min-width: 901px) and (max-height: 850px) {
   .shot-card img { height: 100px; }
   .shot-card .shot-cap { padding: .4rem .55rem; font-size: .72rem; }
@@ -435,13 +439,13 @@ kbd {
 
 <main id="deck">
 
-  <!-- 1 · TITLE -->
-  <section class="slide active">
+  <!-- 1 - TITLE -->
+  <section class="slide active" id="title">
     <div class="wrap" style="display:flex;flex-direction:column;justify-content:center;min-height:74vh">
       <div class="eyebrow">vroomstocks.com</div>
-      <h1>Democratising<br>investment analysis.</h1>
-      <p class="lead mt">An institutional-grade research desk for equities and mutual funds — built for
-        the individual investor first, and for the institutions that serve them next.</p>
+      <h1>Research stocks.<br>Understand your funds.<br>Track what changes.</h1>
+      <p class="lead mt">One affordable workspace for India + US equity research and Indian
+        mutual funds. Discover ideas, test assumptions and follow what you own.</p>
       <div class="tags mt">
         <span class="tag on">India + US markets</span>
         <span class="tag on">Live in production</span>
@@ -455,159 +459,470 @@ kbd {
     </div>
   </section>
 
-  <!-- 2 · VISION -->
-  <section class="slide">
+  <!-- 2 - VISION -->
+  <section class="slide" id="vision">
     <div class="wrap">
       <div class="eyebrow">Vision</div>
       <h2>Great analysis should not be<br>a privilege of capital.</h2>
       <p class="lead">
-        A hedge fund pays for terminals, analysts and models. A retail investor gets a price ticker
-        and a WhatsApp tip. <strong>VroomStocks closes that gap</strong> — democratising investment
-        analysis so that individuals and organisations can build <strong>conviction</strong>, not just
-        opinions.
+        Individual investors can access powerful tools, but joining filings, valuation,
+        fund holdings and ongoing monitoring still takes work. <strong>VroomStocks connects that
+        research journey</strong> so investors can form an independent view, not just follow a tip.
       </p>
       <div class="grid g3 mt-l">
         <div class="card">
           <span class="ico">⚖️</span>
           <h3>Democratise</h3>
-          <p>The same fundamentals, filings, valuation models and screens the professionals use — in one place, at consumer pricing.</p>
+          <p>Company fundamentals, filings, valuation models and screens in one workspace, free to start.</p>
         </div>
         <div class="card">
           <span class="ico">🧭</span>
           <h3>Empower</h3>
-          <p>Not signals to obey, but evidence to reason with. Every number is traceable to a filing or an exchange feed.</p>
+          <p>Evidence to reason with: reported financials, transparent metric definitions and editable valuation assumptions.</p>
         </div>
         <div class="card accent">
           <span class="ico">🛡️</span>
           <h3>Build conviction</h3>
-          <p>Conviction is what makes an investor hold through a drawdown. It comes from understanding, and understanding is a product problem.</p>
+          <p>Compare businesses, challenge assumptions and notice changes. Better understanding, not a promise of better returns.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3 · PROBLEM -->
-  <section class="slide">
+  <!-- 3 - PROBLEM -->
+  <section class="slide" id="problem">
     <div class="wrap">
       <div class="eyebrow">The problem</div>
-      <h2>India onboarded a generation of<br>investors — and gave them no tools.</h2>
+      <h2>Investors have tools.<br>Research is still fragmented.</h2>
       <div class="grid g4 mt">
-        <div class="card stat"><div class="num">~25.7 cr</div><div class="lbl">Demat accounts in India (CDSL + NSDL, mid-2026)</div></div>
-        <div class="card stat"><div class="num">~13.2 cr</div><div class="lbl">Unique registered investors on NSE</div></div>
-        <div class="card stat"><div class="num">~16 cr</div><div class="lbl">Mutual fund folios (AMFI)</div></div>
-        <div class="card stat"><div class="num">~1.8 k</div><div class="lbl">SEBI-registered research analysts serving all of them</div></div>
+        <div class="card"><h3>Find an idea</h3><p>Screen a universe and assemble a shortlist.</p></div>
+        <div class="card"><h3>Build a view</h3><p>Join filings, ratios, comparisons and valuation.</p></div>
+        <div class="card"><h3>Know your exposure</h3><p>Look through funds to the businesses underneath.</p></div>
+        <div class="card"><h3>Keep up</h3><p>Notice results, ownership changes and new signals.</p></div>
       </div>
       <div class="grid g2 mt-l">
         <div>
           <h3>What the investor actually faces</h3>
           <ul class="check mt-s">
-            <li><strong>Data is scattered.</strong> Price on one app, filings on another, fund holdings on a third, none of it joined.</li>
-            <li><strong>Analysis is shallow.</strong> Broker apps optimise for trade frequency, not for understanding a business.</li>
-            <li><strong>Research is gated.</strong> Real terminals cost lakhs a year and are sold to institutions.</li>
-            <li><strong>Advice is noise.</strong> Finfluencer tips fill the vacuum left by a ~1:70,000 analyst-to-investor ratio.</li>
+            <li><strong>Context gets lost.</strong> Moving between screens, filings and spreadsheets breaks the research flow.</li>
+            <li><strong>Assumptions drift.</strong> A valuation needs revisiting as financial results change.</li>
+            <li><strong>Funds hide another layer.</strong> A fund name alone does not explain its underlying holdings.</li>
+            <li><strong>Monitoring takes effort.</strong> Repeating the same checks is not the same as being told what changed.</li>
           </ul>
         </div>
         <div class="card">
           <h3>The consequence</h3>
-          <p class="mt-s">Investors buy on stories and sell on fear, because they never had the
-          apparatus to form an independent view. The gap isn't access to <em>markets</em> — India solved
-          that. The gap is access to <strong>analysis</strong>.</p>
+          <p class="mt-s">The opportunity is not to claim that other tools do not exist.
+          It is to reduce the effort between <strong>finding an idea, understanding it and
+          keeping that understanding current</strong>.</p>
           <div class="tags">
-            <span class="tag">No shared source of truth</span>
-            <span class="tag">No valuation discipline</span>
-            <span class="tag">No look-through into funds</span>
+            <span class="tag">Less context switching</span>
+            <span class="tag">Explicit assumptions</span>
+            <span class="tag">Ongoing monitoring</span>
           </div>
         </div>
       </div>
-      <p class="small mt">Figures are latest publicly reported market statistics (CDSL/NSDL, NSE, AMFI, SEBI), mid-2026, rounded.</p>
+      <p class="small mt">Customer problem hypothesis; not a claim that competing products lack these capabilities.</p>
     </div>
   </section>
 
-  <!-- 4 · WHAT IS VROOMSTOCKS -->
-  <section class="slide">
+  <!-- 4 - CUSTOMER-JOURNEYS -->
+  <section class="slide" id="customer-journeys">
     <div class="wrap">
       <div class="eyebrow">What is VroomStocks</div>
-      <h2>One research desk, from raw filing<br>to investment decision.</h2>
-      <p class="lead">A web platform that ingests company filings, exchange feeds and fund
-        disclosures across <strong>India and the US</strong>, normalises them into one model, and gives
-        every user a private, persistent workspace to analyse, value and track businesses.</p>
-      <div class="grid g4 mt-l">
-        <div class="card"><span class="ico">📥</span><h3>Ingest</h3><p>Filings (SEC XBRL, India XBRL), exchange feeds, fund disclosures, corporate announcements, insider &amp; shareholding data.</p></div>
-        <div class="card"><span class="ico">🧮</span><h3>Normalise</h3><p>One schema across two markets and many providers, with a resilient no-key fallback chain so the app keeps working when a source fails.</p></div>
-        <div class="card"><span class="ico">🔍</span><h3>Analyse</h3><p>Fundamentals, quality scoring, DCF &amp; intrinsic value, technicals, backtests, screeners, mutual-fund look-through.</p></div>
-        <div class="card accent"><span class="ico">✅</span><h3>Decide</h3><p>A private watchlist and portfolio you own, with your own overrides, notes and thesis attached to every holding.</p></div>
+      <h2>Two journeys.<br>One research workspace.</h2>
+      <p class="lead">Built first for self-directed investors researching businesses and
+        understanding their Indian mutual-fund holdings.</p>
+      <div class="grid g2 mt-l">
+        <div class="card accent"><h3>Stocks · India + US</h3><p><strong>Screen → compare → value → track.</strong></p><p class="mt-s">Shortlist companies, examine filings and ratios, compare peers in Visual, adjust a DCF, then save a watchlist and follow changes through alerts.</p></div>
+        <div class="card accent"><h3>Mutual funds · India</h3><p><strong>Screen → import → understand → monitor.</strong></p><p class="mt-s">Explore direct-growth schemes, import a CAS statement, inspect holdings and underlying company quality, and track value and gain/loss.</p></div>
       </div>
       <div class="card mt-l">
-        <h3>The design principle</h3>
-        <p class="mt-s">Every derived number — a quality score, an intrinsic value, a margin trend —
-        must be <strong>traceable back to a primary source</strong>. No black boxes. That is what
-        separates a conviction tool from a tip service.</p>
+        <h3>Evidence before explanation</h3>
+        <p class="mt-s">Reported financials and defined metrics support the analysis; adjustable
+        assumptions make valuation inspectable. AI summaries help explain the material, but
+        can be wrong or incomplete and should be checked against the source.</p>
       </div>
+      <p class="small mt">Research and analysis only. VroomStocks does not currently place trades or provide investment advice.</p>
     </div>
   </section>
 
-  <!-- 5 · WHAT'S BUILT — PRODUCT -->
-  <section class="slide dense">
+  <!-- 5 - PRODUCT -->
+  <section class="slide dense" id="product">
     <div class="wrap">
       <div class="eyebrow">What's built so far · product</div>
-      <h2>Shipped and in production at<br><span style="color:var(--cp-accent)">vroomstocks.com</span></h2>
+      <h2>From a shortlist to an informed view.</h2>
       <div class="grid g3 mt">
         <div class="card">
-          <span class="ico">📊</span><h3>Stocks &amp; watchlists</h3>
-          <p>A dense, spreadsheet-grade table over your universe: growth, margins, returns, leverage, ownership, moat and risk notes — every field user-overridable, with overrides that expire when a fresher quarter lands.</p>
+          <h3>1 · Discover</h3>
+          <p>Stock and mutual-fund screeners, saved screens, named watchlists and metric templates. Start with a focused universe, not a wall of numbers.</p>
         </div>
         <div class="card">
-          <span class="ico">🏛️</span><h3>Financial statements</h3>
-          <p>Income statement, balance sheet and cash flow assembled from <strong>SEC XBRL</strong> (US) and <strong>India XBRL</strong> — annual, biannual and quarterly, from the filings themselves.</p>
+          <h3>2 · Understand</h3>
+          <p>Company filings, financial statements and <strong>financial ratios</strong>, segments/KPIs and year-over-year changes. Visual compares up to six companies; annual, quarterly, biannual and LTM views depend on available data.</p>
         </div>
         <div class="card">
-          <span class="ico">💰</span><h3>Valuation &amp; DCF</h3>
-          <p>A client-side valuation engine and DCF workbench: build the intrinsic-value case, flex the assumptions, and see margin of safety against live price.</p>
+          <h3>3 · Value</h3>
+          <p>Editable DCF assumptions and scenario comparisons. Q-Score adds a defined quality-versus-valuation lens; AI insight explains valuation, fundamentals, technicals and options.</p>
         </div>
         <div class="card">
-          <span class="ico">📈</span><h3>Technicals &amp; charting</h3>
-          <p>Daily candles, indicators, RSI and multi-year history with a charting surface and backtesting over the same data the fundamentals run on.</p>
+          <h3>4 · Monitor</h3>
+          <p>Earnings calendar, transcripts and call summaries; exchange announcements, insider/shareholding data and email digests. Follow price moves, technical signals and stock or fund screener changes.</p>
         </div>
         <div class="card">
-          <span class="ico">🎛️</span><h3>Screeners</h3>
-          <p>Equity screener over the normalised fundamental model, plus a <strong>mutual-fund screener</strong> with category averages and holdings-level metrics.</p>
+          <h3>5 · Test</h3>
+          <p>Technical charts, strategy backtests, paper trading and watchlist-wide strategy analytics. Options analytics cover US names; India availability varies. Simulated performance is not a forecast.</p>
         </div>
         <div class="card">
-          <span class="ico">🧾</span><h3>Mutual funds &amp; portfolio</h3>
-          <p>Fund detail with holdings look-through, AMFI NAV data, and <strong>CAS import</strong> so an investor's real portfolio lands in the tool in one step.</p>
+          <h3>Across your funds</h3>
+          <p>Indian direct-growth fund screening, CAS import, NAV-based portfolio tracking and holdings look-through. Broader cross-asset portfolio insights remain on the roadmap.</p>
+        </div>
+        <p class="small mt"><strong>Q-Score = Q-Green-Score − Q-Black-Score</strong>, ranging from −100 to +100: quality less valuation expensiveness, not a predicted return.
+          <a href="https://vroomstocks.com/learn/getting-started" target="_blank" rel="noopener">Product guide</a> ·
+          <a href="https://vroomstocks.com/research/options-charts" target="_blank" rel="noopener">Coverage notes</a>.
+          Public documentation reviewed 11 Oct 2026; feature and history availability vary by company and plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 - STOCK-JOURNEY -->
+  <section class="slide" id="stock-journey">
+    <div class="wrap">
+      <div class="eyebrow">Product in action · stocks</div>
+      <h2>Find an idea. Compare the business.<br>Challenge the price.</h2>
+      <div class="grid g3 mt journey-grid">
+        <div>
+          <a class="shot-card" href="assets/screenshots/stock-screener.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/stock-screener.png" alt="Live equity screener with India universe and filters">
+            <span class="shot-cap">1 · Discover with a saved screen</span>
+          </a>
+          <p>Use financial filters to build a shortlist, then open the companies worth investigating.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/visual-comparison.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/visual-comparison.png" alt="Official guide screenshot of Visual comparing NVDA, AMD and AVGO returns and margins">
+            <span class="shot-cap">2 · Compare ratios in Visual · guide capture</span>
+          </a>
+          <p>Compare returns and margins across peers over time. Save the view to revisit it after results.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/valuation-dcf.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/valuation-dcf.png" alt="Live DCF valuation matrix with editable assumptions">
+            <span class="shot-cap">3 · Test valuation assumptions</span>
+          </a>
+          <p>Adjust discount and growth rates to see how the valuation changes, rather than accept one target price.</p>
+        </div>
+      </div>
+      <div class="card accent mt"><h3>The outcome</h3><p>A shortlist backed by comparisons and explicit assumptions, ready to track in a watchlist.</p></div>
+      <p class="small mt">Screens illustrate separate steps, not one continuous account session. Screener and DCF: signed-in captures, Oct 2026.
+        Visual: <a href="https://vroomstocks.com/learn/getting-started" target="_blank" rel="noopener">official product-guide capture</a>, retrieved 11 Oct 2026; not freshly recaptured.
+        Click any image to enlarge. Examples are not recommendations.</p>
+    </div>
+  </section>
+
+  <!-- 7 - MONITORING-JOURNEYS -->
+  <section class="slide" id="monitoring-journeys">
+    <div class="wrap">
+      <div class="eyebrow">Product in action · ownership + monitoring</div>
+      <h2>Understand what you own.<br>Notice what changes.</h2>
+      <div class="grid g2 mt journey-grid">
+        <div>
+          <a class="shot-card" href="assets/screenshots/mutual-funds-portfolio.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/mutual-funds-portfolio.png" alt="Live mutual fund portfolio with imported holdings">
+            <span class="shot-cap">Fund journey · CAS import → holdings → look-through</span>
+          </a>
+          <p>Import your fund holdings, track NAV-based value and gain/loss, then inspect the businesses held by each fund.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/email-alerts.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/email-alerts.png" alt="Live email alert configuration for research monitoring">
+            <span class="shot-cap">Monitoring journey · saved screen → rule → digest</span>
+          </a>
+          <p>Follow changes in a saved screen or watchlist. Configure a cadence and receive a combined digest when there is something to report.</p>
+        </div>
+      </div>
+      <p class="small mt">Signed-in captures, Oct 2026; the alert image shows configuration, not proof of delivery.
+        <a href="https://vroomstocks.com/research/alerts" target="_blank" rel="noopener">Documented alert behaviour</a> includes stock/fund screener changes, price, signals, insider/shareholding and earnings updates.
+        Click to enlarge; the complete gallery is in the appendix.</p>
+    </div>
+  </section>
+
+  <!-- 8 - TRACTION -->
+  <section class="slide" id="traction">
+    <div class="wrap">
+      <div class="eyebrow">Early traction · as of 11 October 2026</div>
+      <h2>A live product.<br>An early user base to learn from.</h2>
+      <div class="grid g3 mt">
+        <div class="card stat"><div class="num">May 2026</div><div class="lbl">Founded · founder-provided</div></div>
+        <div class="card stat"><div class="num">~4K</div><div class="lbl">Users · founder-provided; counting definition not supplied</div></div>
+        <div class="card stat"><div class="num">Live</div><div class="lbl">Research, fund tracking, simulation and email alerts</div></div>
+      </div>
+      <div class="grid g2 mt-l">
+        <div class="card"><h3>What this establishes</h3><p>There is a working product and a reported audience. The next question is whether people build a repeatable research habit and choose to pay for greater capacity.</p></div>
+        <div class="card accent"><h3>Next evidence to report</h3><p>Define unique users and activation; measure returning-user cohorts, paid conversion, renewal behaviour and revenue. Activation could mean a saved watchlist plus a completed research action.</p></div>
+      </div>
+      <p class="small mt">The ~4K figure is not labelled as registered, active or paying users because its definition has not been supplied.
+        Retention, paying-customer counts and revenue were not provided. No product-market-fit or recurring-revenue claim is implied.</p>
+    </div>
+  </section>
+
+  <!-- 9 - BUSINESS-MODEL -->
+  <section class="slide dense" id="business-model">
+    <div class="wrap">
+      <div class="eyebrow">Business model · live retail pricing</div>
+      <h2>Start free.<br>Pay for a wider research workspace.</h2>
+      <div class="grid g3 mt">
+        <div class="card">
+          <h3>Basic · free</h3>
+          <p>Core research, screeners, DCF, fund CAS import and simulation.</p>
+          <ul class="check mt-s">
+            <li>2 watchlists, 5 stocks each</li>
+            <li>5 years of financial history</li>
+            <li>2 saved Visual comparisons</li>
+            <li>5 earnings summaries + 5 AI insights per month</li>
+            <li>1 alert of each type</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>Advanced · expanded limits</h3>
+          <p><strong>₹99 / 30 days or ₹999 / 365 days</strong></p>
+          <ul class="check mt-s">
+            <li>10 watchlists, 100 stocks each</li>
+            <li>10 years of financial history</li>
+            <li>20 saved Visual comparisons</li>
+            <li>100 earnings summaries + 100 AI insights per month</li>
+            <li>20 alerts of each type</li>
+          </ul>
         </div>
         <div class="card">
-          <span class="ico">🌏</span><h3>India depth</h3>
-          <p>NSE option chains, exchange announcements, insider trading and shareholding-pattern data — the India-specific surfaces generic tools skip.</p>
+          <h3>Enterprise · discovery stage</h3>
+          <p>Contact-led offers for seats, scale and support are listed on the site. Embedded research and external data APIs are proposed design-partner pilots, not a claimed revenue stream.</p>
+          <p class="mt-s">Validate data redistribution rights, requirements, service levels and willingness to pay before committing to contracts.</p>
         </div>
-        <div class="card">
-          <span class="ico">🤖</span><h3>AI Insight</h3>
-          <p>LLM-generated company insight grounded in the structured filings and financials already in the system — explanation on top of evidence, not instead of it.</p>
+      </div>
+      <div class="card mt"><h3>Conversion hypothesis</h3><p>Let investors experience the core workflow free; charge when more holdings, longer history or regular AI and alerts justify higher limits. Test renewal and retention before projecting recurring revenue.</p></div>
+      <p class="small mt"><a href="https://vroomstocks.com/pricing" target="_blank" rel="noopener">Pricing checked 11 Oct 2026</a>.
+        One-time access, GST included, no automatic renewal. Also ₹249 / 90 days and ₹499 / 180 days.
+        History depends on source availability; trial terms are not included in this comparison.</p>
+    </div>
+  </section>
+
+  <!-- 10 - ROADMAP -->
+  <section class="slide dense" id="roadmap">
+    <div class="wrap">
+      <div class="eyebrow">Roadmap</div>
+      <h2>Deepen the research habit.<br>Expand through validated pilots.</h2>
+      <div class="grid g2 mt">
+        <div class="rail">
+          <div class="node done">
+            <h3>Shipped — Research core</h3>
+            <p class="small">Financials, Visual comparisons, DCF, screeners, MF CAS import, AI summaries, earnings and email alerts. Backtests and paper trading only; no live order execution.</p>
+          </div>
+          <div class="node">
+            <h3>1 · Newsletters &amp; alert expansion</h3>
+            <p class="small">Live email alerts are the foundation. Next: personalised research newsletters; measure repeat research activity and retention, not just email opens.</p>
+          </div>
+          <div class="node">
+            <h3>2 · Broker integration</h3>
+            <p class="small">Planned holdings sync and eventual order integration through broker partners. Pilot access, user consent and applicable compliance requirements precede live execution.</p>
+          </div>
+          <div class="node">
+            <h3>3 · VroomAI</h3>
+            <p class="small">Planned conversational research over filings, financials and holdings, with source citations and evaluation. Builds on today's AI summaries; the broader agent is not yet claimed as shipped.</p>
+          </div>
         </div>
-        <div class="card">
-          <span class="ico">🧪</span><h3>Strategy &amp; simulation</h3>
-          <p>A strategy engine, trade configurations and paper-trade simulation to test a thesis before any capital is committed.</p>
-        </div>
-        <div class="card">
-          <span class="ico">🎙️</span><h3>Earnings call summaries</h3>
-          <p>AI-generated, per-quarter summaries of what management actually said on the call — key points, guidance, tone and themes, each tied back to the transcript.</p>
-        </div>
-        <div class="card">
-          <span class="ico">🔔</span><h3>Email alerts</h3>
-          <p>Price, technical-signal, shareholding, screener and earnings triggers, consolidated into one digest per cadence — built to be the pull-to-push engagement layer.</p>
+        <div class="rail">
+          <div class="node">
+            <h3>4 · Algorithmic trading</h3>
+            <p class="small">Explore rule-based execution beyond today's backtesting and paper trading. Depends on broker integration, risk controls and regulatory review; simulated results do not predict returns.</p>
+          </div>
+          <div class="node">
+            <h3>5 · Portfolio import, analysis and Insights</h3>
+            <p class="small">Extend live MF CAS import and holdings look-through to broader imports, consolidated allocation, concentration, overlap and performance insights across assets.</p>
+          </div>
+          <div class="node">
+            <h3>6 · Enterprise APIs</h3>
+            <p class="small">Co-design external APIs with RIAs, wealth platforms and fintechs. Validate data redistribution rights, service levels and willingness to pay before a commercial launch.</p>
+          </div>
+          <div class="card accent mt">
+            <h3>Why this order</h3>
+            <p class="mt-s">Prioritise engagement, partner access and research assistance before execution.
+            Broader portfolio insights and enterprise distribution follow. This is a priority order,
+            not a dated delivery commitment or a forecast of enterprise margins.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5B · PRODUCT IN ACTION — SCREENSHOTS -->
-  <section class="slide dense">
+  <!-- 11 - MARKET -->
+  <section class="slide dense" id="market">
     <div class="wrap">
-      <div class="eyebrow">What's built so far · product in action</div>
-      <h2>Not mockups — live screens from<br><span style="color:var(--cp-accent)">vroomstocks.com</span></h2>
+      <div class="eyebrow">Market · India</div>
+      <h2>Size the opportunity in customers,<br>not accounts or folios.</h2>
+      <p class="lead">Illustrative retail sizing at today's ₹999 annual-access price.
+        Customer pools below are planning assumptions, not measured market statistics.</p>
+      <div class="funnel mt-l">
+        <div class="band tam">
+          <div class="k">TAM</div>
+          <div>
+            <div class="v">₹9,990 cr / year</div>
+            <div class="d">Assumed potential pool: 10 crore unique individuals × ₹999 for one annual purchase each. A scenario ceiling, not proven demand. No addition of demat accounts and MF folios.</div>
+          </div>
+        </div>
+        <div class="band sam">
+          <div class="k">SAM</div>
+          <div>
+            <div class="v">₹999 cr / year</div>
+            <div class="d">Assumed research-seeking subset: 1 crore unique individuals × ₹999. Validate this 10% segment hypothesis through customer research and acquisition experiments.</div>
+          </div>
+        </div>
+        <div class="band som">
+          <div class="k">SOM</div>
+          <div>
+            <div class="v">~₹20–40 cr / year</div>
+            <div class="d">Illustrative scale case: 2–4 lakh annual-plan purchasers × ₹999 = ₹19.98–39.96 cr. Requires 2–4% of the assumed SAM; not a committed 3-year forecast.</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g3 mt-l">
+        <div class="card"><h3>Acquisition hypothesis</h3><p>Public research and guides → free workspace → saved watchlists and alerts → paid capacity. Measure conversion and acquisition cost at each step.</p></div>
+        <div class="card"><h3>Evidence before scale</h3><p>Validate retention, renewal, willingness to pay and cost to serve. ~4K reported users do not establish the paying audience assumed here.</p></div>
+        <div class="card"><h3>Enterprise: separate upside</h3><p>No enterprise revenue included. Model contracted customers × annual contract value only after paid pilots, rights checks and service-cost estimates.</p></div>
+      </div>
+      <p class="small mt">All amounts are annual gross-collection scenarios including GST, before refunds and operating costs; not recognised revenue or ARR.
+        Assumes one 365-day purchase per customer at <a href="https://vroomstocks.com/pricing" target="_blank" rel="noopener">₹999</a>, no price change and no automatic renewal.
+        Pool sizes are unvalidated assumptions, not official investor counts.</p>
+    </div>
+  </section>
+
+  <!-- 12 - POSITIONING -->
+  <section class="slide" id="positioning">
+    <div class="wrap">
+      <div class="eyebrow">Competitive positioning · India + global</div>
+      <h2>The combination matters.<br>No single feature has to be unique.</h2>
+      <p class="lead">Screener.in, Trendlyne, Tickertape, Fiscal.ai and TradingView already offer
+        strong, overlapping tools. VroomStocks competes on a connected research journey at an accessible entry price.</p>
+      <div class="grid g3 mt-l">
+        <div class="card accent"><h3>Compare → value → monitor</h3><p>Company filings and financial ratios, saved Visual comparisons, editable DCF, earnings transcripts and alerts in one workspace.</p></div>
+        <div class="card accent"><h3>Stocks + Indian funds</h3><p>India/US equity research alongside Indian fund screening, CAS import and holdings look-through, with strategy simulation for stocks.</p></div>
+        <div class="card accent"><h3>Free core, paid capacity</h3><p>Experience the workflow free; ₹999 buys 365 days of higher limits. Lower listed entry cost does not mean equivalent data or feature entitlements.</p></div>
+      </div>
+      <div class="card mt"><h3>What we still need to prove</h3><p>That this combination reduces research effort, brings users back and supports sustainable paid conversion. Feature breadth and pricing alone do not establish a moat.</p></div>
+      <p class="small mt">The full six-product comparison, including pricing, functionality, funding, revenue, Users# and founding/launch dates,
+        is retained in the appendix with linked sources and verification limits.</p>
+    </div>
+  </section>
+
+  <!-- 13 - TEAM -->
+  <section class="slide" id="team">
+    <div class="wrap">
+      <div class="eyebrow">Who we are</div>
+      <h2>Two engineers who have<br>built systems at scale.</h2>
+      <div class="grid g2 mt">
+        <div class="card person">
+          <div class="avatar">AA</div>
+          <div class="nm">Arjun Agarwal</div>
+          <div class="rl">Co-founder · Product &amp; Engineering</div>
+          <p>15 years leading and managing high-performance engineering teams, currently at
+             <strong>Microsoft</strong> (Hyderabad). <strong>IIT Guwahati</strong> alumnus.
+             Builds and writes on business fundamentals, margins and valuation — VroomStocks is the
+             tool he wanted as an investor and could build as an engineer.</p>
+          <div class="tags">
+            <span class="tag on">Microsoft</span>
+            <span class="tag">IIT Guwahati</span>
+            <span class="tag">Engineering leadership</span>
+            <span class="tag">Valuation &amp; fundamentals</span>
+          </div>
+          <p class="small mt-s"><a href="https://www.linkedin.com/in/agarwal-arjun/" target="_blank" rel="noopener">linkedin.com/in/agarwal-arjun&nbsp;↗</a></p>
+        </div>
+        <div class="card person">
+          <div class="avatar">KM</div>
+          <div class="nm">Krati Mittal</div>
+          <div class="rl">Co-founder · Platform, Architecture &amp; Partnerships</div>
+          <p>14+ years in software engineering and team leadership. <strong>Principal Software
+             Engineer at Microsoft</strong>; previously <strong>Expedia</strong> and
+             <strong>PayTM</strong>. Leads large-scale distributed systems work and mentors engineers
+             on system design — the architecture discipline behind the platform.</p>
+          <div class="tags">
+            <span class="tag on">Microsoft</span>
+            <span class="tag">Ex-Expedia</span>
+            <span class="tag">Ex-PayTM</span>
+            <span class="tag">Distributed systems</span>
+            <span class="tag">Partnerships</span>
+          </div>
+          <p class="small mt-s"><a href="https://www.linkedin.com/in/krati-mittal/" target="_blank" rel="noopener">linkedin.com/in/krati-mittal&nbsp;↗</a></p>
+        </div>
+      </div>
+      <div class="card accent mt">
+        <h3>Why this team</h3>
+        <p class="mt-s">Our background fits the challenge of connecting financial data and running a research platform.
+        The product is live; the next work is improving data quality, proving repeat use and building distribution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 - ASK -->
+  <section class="slide" id="ask">
+    <div class="wrap">
+      <div class="eyebrow">The ask</div>
+      <h2>Help validate the next stage.</h2>
+      <div class="grid g2 mt">
+        <div class="card">
+          <span class="ico">🤝</span>
+          <h3>Design-partner pilots · proposed</h3>
+          <ul class="check mt-s">
+            <li><strong>Brokers &amp; wealth platforms</strong> — scope a research or holdings-sync pilot before committing to integration.</li>
+            <li><strong>RIAs &amp; research teams</strong> — test screening, valuation and fund look-through against a real workflow.</li>
+            <li><strong>Fintechs &amp; data buyers</strong> — define API requirements, permitted data usage, service levels and commercial value.</li>
+            <li><strong>Content &amp; community partners</strong> — test research distribution with measurable activation and retention.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="ico">🚀</span>
+          <h3>Join us</h3>
+          <ul class="check mt-s">
+            <li><strong>Founding engineers</strong> — data platform, algo/execution, and applied AI for VroomAI.</li>
+            <li><strong>Finance &amp; research talent</strong> — to shape scoring, valuation methodology and editorial.</li>
+            <li><strong>Growth &amp; partnerships</strong> — to own the newsletter funnel and B2B pipeline.</li>
+            <li><strong>Advisors &amp; angels</strong> — capital markets, regulatory and go-to-market depth in India.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card mt-l">
+        <h3>A concrete first engagement</h3>
+        <p class="mt-s">Choose one customer workflow, agree a pilot scope and success measures,
+        then evaluate repeat usage and willingness to pay. Enterprise delivery depends on data rights
+        and service readiness; live execution also requires broker, risk and compliance work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 - CLOSE -->
+  <section class="slide" id="close">
+    <div class="wrap" style="display:flex;flex-direction:column;justify-content:center;min-height:70vh">
+      <div class="eyebrow">Let's talk</div>
+      <h1 style="font-size:clamp(1.9rem,4.4vw,3.4rem)">Every investor deserves<br>a research desk.</h1>
+      <p class="lead mt">Research stocks. Understand your funds. Track what changes.<br>
+        Help us make that workflow useful to more investors.</p>
+      <div class="mt-l" style="display:flex;gap:.7rem;flex-wrap:wrap;align-items:center">
+        <a class="btn cta" href="https://vroomstocks.com" target="_blank" rel="noopener">Visit vroomstocks.com ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/agarwal-arjun/" target="_blank" rel="noopener">Arjun on LinkedIn ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/krati-mittal/" target="_blank" rel="noopener">Krati on LinkedIn ↗</a>
+      </div>
+      <p class="small mt-l">VroomStocks · Free to start. Research and analysis only; not investment advice.<br>
+        Supporting product captures, competitor sources and platform notes follow in the appendix.</p>
+    </div>
+  </section>
+
+  <!-- 16 - SCREENSHOT-GALLERY -->
+  <section class="slide dense" id="screenshot-gallery">
+    <div class="wrap">
+      <div class="eyebrow">Appendix · product gallery</div>
+      <h2>Explore the research workspace.</h2>
       <div class="grid g4 mt shot-grid">
         <a class="shot-card" href="assets/screenshots/watchlist.png" aria-haspopup="dialog">
-          <img src="assets/screenshots/watchlist.png" alt="Watchlist with Q-Score and 75+ metrics">
+          <img src="assets/screenshots/watchlist.png" alt="Watchlist with Q-Score and financial metrics">
           <span class="shot-cap">Stocks &amp; watchlists</span>
         </a>
         <a class="shot-card" href="assets/screenshots/financials.png" aria-haspopup="dialog">
@@ -650,138 +965,21 @@ kbd {
           <img src="assets/screenshots/email-alerts.png" alt="Configured email alerts across price, technical and fundamental triggers">
           <span class="shot-cap">Email alerts</span>
         </a>
+        <a class="shot-card" href="assets/screenshots/visual-comparison.png" aria-haspopup="dialog">
+          <img src="assets/screenshots/visual-comparison.png" alt="Official guide capture comparing financial ratios across NVDA, AMD and AVGO">
+          <span class="shot-cap">Visual comparisons · official guide capture</span>
+        </a>
       </div>
-      <p class="small mt">Captured live from a signed-in account, October 2026. Click any screenshot to enlarge it in a popup. Press Escape to close.</p>
+      <p class="small mt">11 signed-in captures from October 2026, plus the Visual screenshot from the
+        <a href="https://vroomstocks.com/learn/getting-started" target="_blank" rel="noopener">official product guide</a>, retrieved 11 Oct 2026.
+        Click to enlarge in a popup; Escape closes it. Captures show historical UI, not current market values.</p>
     </div>
   </section>
 
-  <!-- 6 · WHAT'S BUILT — ENGINEERING -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="eyebrow">What's built so far · under the hood</div>
-      <h2>Not a prototype.<br>A production system.</h2>
-      <div class="grid g4 mt">
-        <div class="card stat"><div class="num">80+</div><div class="lbl">API endpoints across 15 feature slices</div></div>
-        <div class="card stat"><div class="num">2</div><div class="lbl">Markets fully modelled — India &amp; US</div></div>
-        <div class="card stat"><div class="num">5</div><div class="lbl">Independent data providers in the fallback chain</div></div>
-        <div class="card stat"><div class="num">100%</div><div class="lbl">Per-user data isolation on Azure SQL</div></div>
-      </div>
-      <div class="grid g2 mt-l">
-        <div>
-          <h3>Platform</h3>
-          <ul class="check mt-s">
-            <li><strong>Flask + Azure SQL</strong> on Azure App Service, custom domain, PWA-installable.</li>
-            <li><strong>Auth &amp; isolation</strong> — Google and Azure sign-in; every row scoped to its owner.</li>
-            <li><strong>Resilient ingestion</strong> — a keyless fallback chain (yfinance → FMP → Stooq/SEC EDGAR → NSE) so a single provider outage never blanks the product.</li>
-            <li><strong>Layered caching</strong> — per-user freshness, cross-user single-flight and bounded series caches, tuned for provider rate limits.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Engineering discipline</h3>
-          <ul class="check mt-s">
-            <li><strong>Regression-tested invariants</strong> — including an AST-level test that structurally forbids the concurrency bug class that once took production down.</li>
-            <li><strong>Bounded upstream I/O</strong> — every third-party call has an enforced timeout, even where the library exposes none.</li>
-            <li><strong>Numeric parity tests</strong> between the server model and the client-side valuation engine.</li>
-            <li><strong>Admin &amp; ops console</strong> — sync scheduling, warm jobs, telemetry via Application Insights.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="small mt">Translation: the hard, unglamorous part — multi-market data reliability — is already done. That is the moat and the launchpad.</p>
-    </div>
-  </section>
-
-  <!-- 7 · ROADMAP -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="eyebrow">Roadmap</div>
-      <h2>From research tool<br>to investment operating system.</h2>
-      <div class="grid g2 mt">
-        <div class="rail">
-          <div class="node done">
-            <h3>Shipped — Research core</h3>
-            <p class="small">Multi-market fundamentals, filings, valuation, technicals, screeners, mutual funds, portfolio, AI insight, earnings call summaries and email alerts.</p>
-          </div>
-          <div class="node">
-            <h3>1 · Newsletters &amp; alert expansion</h3>
-            <p class="small">Email alerts are already live for price moves, technical signals, shareholding, screeners and earnings. Next: expand that foundation into personalised research newsletters — the engagement and retention layer, and the top of the acquisition funnel.</p>
-          </div>
-          <div class="node">
-            <h3>2 · Broker integration</h3>
-            <p class="small">Live holdings and order placement through Indian broker APIs. Closes the loop between analysis and action, and makes the portfolio real-time instead of imported.</p>
-          </div>
-          <div class="node">
-            <h3>3 · VroomAI</h3>
-            <p class="small">A research analyst that answers in natural language over the full, structured corpus — filings, financials, holdings, announcements — with every claim cited to its source. Not a chatbot bolted on; an agent over a database we already own.</p>
-          </div>
-        </div>
-        <div class="rail">
-          <div class="node">
-            <h3>4 · Algorithmic trading</h3>
-            <p class="small">Promote the existing strategy engine and backtester into live, rule-based execution — systematic strategies an individual can author, test and deploy without writing code.</p>
-          </div>
-          <div class="node">
-            <h3>5 · Portfolio import, analysis and Insights</h3>
-            <p class="small">Build on the existing mutual-fund CAS import with broader portfolio imports and consolidated analysis across holdings. Surface allocation, concentration, overlap and performance insights so investors can understand their portfolio as a whole, not just one security at a time.</p>
-          </div>
-          <div class="node">
-            <h3>6 · Enterprise APIs</h3>
-            <p class="small">Sell the normalised India+US fundamental, filing and fund data as an API to RIAs, wealth platforms, fintechs and broker apps. B2B revenue on infrastructure already built for B2C.</p>
-          </div>
-          <div class="card accent mt">
-            <h3>Why this order</h3>
-            <p class="mt-s">Each step builds on the previous one's capabilities. Newsletters and alerts
-            create habit; brokers connect research to action; VroomAI adds explanation; algo
-            adds systematic execution. Portfolio analysis brings those capabilities together across holdings;
-            enterprise APIs turn the data platform into a second, higher-margin business.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8 · MARKET -->
-  <section class="slide dense">
-    <div class="wrap">
-      <div class="eyebrow">Market · India</div>
-      <h2>TAM / SAM / SOM</h2>
-      <p class="lead">A bottom-up estimate of the Indian investment-analysis market — the spend on
-        research, analytics and decision tooling, not on brokerage itself.</p>
-      <div class="funnel mt-l">
-        <div class="band tam">
-          <div class="k">TAM</div>
-          <div>
-            <div class="v">₹18,000–22,000 cr <span style="font-size:.7em;color:var(--cp-text-muted)">(~$2.2–2.6 B) / yr</span></div>
-            <div class="d">Every Indian investing entity that could pay for analysis: ~25.7 cr demat accounts and ~16 cr MF folios, plus advisors, RIAs, wealth platforms, brokers, AMCs and institutions. Assumes a blended ~₹700–900/yr of analysis value per active investing relationship, plus institutional data spend.</div>
-          </div>
-        </div>
-        <div class="band sam">
-          <div class="k">SAM</div>
-          <div>
-            <div class="v">₹3,000–4,000 cr <span style="font-size:.7em;color:var(--cp-text-muted)">(~$360–480 M) / yr</span></div>
-            <div class="d">The reachable, self-directed segment: ~2.5–3 cr genuinely active, research-seeking retail investors (a slice of NSE's ~13.2 cr registered base) at ₹1,000–1,500/yr, plus ~1,500+ RIAs, boutique research houses and mid-size wealth/fintech platforms who buy data and tooling.</div>
-          </div>
-        </div>
-        <div class="band som">
-          <div class="k">SOM</div>
-          <div>
-            <div class="v">₹40–90 cr <span style="font-size:.7em;color:var(--cp-text-muted)">(~$5–11 M) / yr</span></div>
-            <div class="d">A credible 3-year target: ~2–4 lakh paying retail subscribers (≈1% of SAM's retail pool) at ₹1,500–2,000/yr, plus 30–60 enterprise API contracts. Reachable through content-led acquisition, the newsletter funnel and broker/platform partnerships.</div>
-          </div>
-        </div>
-      </div>
-      <div class="grid g3 mt-l">
-        <div class="card"><h3>Why now</h3><p>Retail participation has structurally re-rated post-2020, SEBI has tightened the finfluencer channel, and account aggregator + broker APIs have made integration cheap for the first time.</p></div>
-        <div class="card"><h3>Why us</h3><p>The multi-market data spine is already built and running. VroomStocks combines fundamentals, filings, funds, valuation and simulation at an accessible price — our positioning is the integrated workflow, not exclusive ownership of any one feature.</p></div>
-        <div class="card"><h3>Two revenue engines</h3><p>B2C subscriptions fund the product; B2B data APIs monetise the same infrastructure at far higher margin and much lower churn.</p></div>
-      </div>
-      <p class="small mt">Bottom-up model built on publicly reported CDSL/NSDL, NSE, AMFI and SEBI statistics (mid-2026). Ranges are estimates and assumptions are stated on-slide; they are not a forecast.</p>
-    </div>
-  </section>
-
-  <!-- 10 · COMPETITOR ANALYSIS -->
+  <!-- 17 - COMPETITOR-ANALYSIS -->
   <section class="slide dense" id="competitor-analysis">
     <div class="wrap">
-      <div class="eyebrow">Competitive landscape · India + global</div>
+      <div class="eyebrow">Appendix · competitive landscape · India + global</div>
       <h2>VroomStocks: breadth at an accessible price.</h2>
       <div class="comparison-scroll" role="region" aria-label="Competitor comparison; scroll horizontally on smaller screens" tabindex="0">
         <table class="comparison-table" aria-label="Pricing, functionality, founding, funding, revenue and user counts">
@@ -822,7 +1020,7 @@ kbd {
               <td>Custom screens, analyst forecasts, scorecards, red flags &amp; sentiment</td>
               <td>Segments/KPIs, transcripts, DCF &amp; reverse DCF, AI summaries; MCP add-on</td>
               <td>Pine Script, 400+ indicators, financials, screeners &amp; technical alerts</td>
-              <td><strong>Company filings, financial ratios, earnings calendar, earnings transcripts, Q-Score, adjustable DCF, AI insight &amp; earnings summaries</strong></td>
+              <td><strong>Company filings, financial ratios, earnings calendar, earnings transcripts, Visual comparisons, Q-Score, DCF &amp; AI summaries</strong></td>
             </tr>
             <tr>
               <th scope="row">Portfolio &amp; strategy</th>
@@ -867,15 +1065,10 @@ kbd {
               <td><a href="https://www.tickertape.in/pricing" target="_blank" rel="noopener">6m+</a><small>Platform-stated “trusted users”</small></td>
               <td>NV</td>
               <td><a href="https://www.tradingview.com/pricing/" target="_blank" rel="noopener">100m</a><small>Platform-stated “traders”</small></td>
-              <td><strong>~4K</strong><small>Founder-provided · Oct 2026</small></td>
+              <td><strong>~4K</strong><small>Founder-provided · Oct 2026; definition not supplied</small></td>
             </tr>
           </tbody>
         </table>
-      </div>
-      <div class="grid g3 mt-s">
-        <div class="card accent"><h3>Accessible paid tier</h3><p>₹999/365 days plus a free tier. Lower listed entry cost; not equivalent feature or data entitlements.</p></div>
-        <div class="card accent"><h3>Research + funds + simulation</h3><p>India/US DCF, Indian fund look-through, CAS import and strategy testing in one workspace.</p></div>
-        <div class="card accent"><h3>Evidence before explanation</h3><p>Filing-derived numbers, editable DCF and AI summaries. Our positioning is the combination and price, not exclusive features.</p></div>
       </div>
       <p class="small comparison-notes">Checked 11 Oct 2026. <strong>NV</strong> = not verified in cited public sources, not zero. Users# reflects stated user counts, not active-user metrics; definitions differ. *Offer/snapshot pricing; see source notes.</p>
       <details class="comparison-sources">
@@ -903,103 +1096,33 @@ kbd {
     </div>
   </section>
 
-  <!-- 11 · TEAM -->
-  <section class="slide">
+  <!-- 18 - ENGINEERING -->
+  <section class="slide" id="engineering">
     <div class="wrap">
-      <div class="eyebrow">Who we are</div>
-      <h2>Two engineers who have<br>built systems at scale.</h2>
-      <div class="grid g2 mt">
-        <div class="card person">
-          <div class="avatar">AA</div>
-          <div class="nm">Arjun Agarwal</div>
-          <div class="rl">Co-founder · Product &amp; Engineering</div>
-          <p>15 years leading and managing high-performance engineering teams, currently at
-             <strong>Microsoft</strong> (Hyderabad). <strong>IIT Guwahati</strong> alumnus.
-             Builds and writes on business fundamentals, margins and valuation — VroomStocks is the
-             tool he wanted as an investor and could build as an engineer.</p>
-          <div class="tags">
-            <span class="tag on">Microsoft</span>
-            <span class="tag">IIT Guwahati</span>
-            <span class="tag">Engineering leadership</span>
-            <span class="tag">Valuation &amp; fundamentals</span>
-          </div>
-          <p class="small mt-s"><a href="https://www.linkedin.com/in/agarwal-arjun/" target="_blank" rel="noopener">linkedin.com/in/agarwal-arjun&nbsp;↗</a></p>
-        </div>
-        <div class="card person">
-          <div class="avatar">KM</div>
-          <div class="nm">Krati Mittal</div>
-          <div class="rl">Co-founder · Platform, Architecture &amp; Partnerships</div>
-          <p>14+ years in software engineering and team leadership. <strong>Principal Software
-             Engineer at Microsoft</strong>; previously <strong>Expedia</strong> and
-             <strong>PayTM</strong>. Leads large-scale distributed systems work and mentors engineers
-             on system design — the architecture discipline behind the platform.</p>
-          <div class="tags">
-            <span class="tag on">Microsoft</span>
-            <span class="tag">Ex-Expedia</span>
-            <span class="tag">Ex-PayTM</span>
-            <span class="tag">Distributed systems</span>
-            <span class="tag">Partnerships</span>
-          </div>
-          <p class="small mt-s"><a href="https://www.linkedin.com/in/krati-mittal/" target="_blank" rel="noopener">linkedin.com/in/krati-mittal&nbsp;↗</a></p>
-        </div>
-      </div>
-      <div class="card accent mt">
-        <h3>Why this team</h3>
-        <p class="mt-s">The hardest part of this business is not the UI — it is running reliable,
-        normalised, multi-market financial data at low cost. That is exactly the problem two senior
-        distributed-systems engineers are built to solve, and it is already solved and in production.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12 · THE ASK -->
-  <section class="slide">
-    <div class="wrap">
-      <div class="eyebrow">The ask</div>
-      <h2>Take the vision forward<br>with us.</h2>
-      <div class="grid g2 mt">
-        <div class="card">
-          <span class="ico">🤝</span>
-          <h3>Commercial collaboration</h3>
+      <div class="eyebrow">Appendix · data platform and diligence</div>
+      <h2>Data quality is an ongoing discipline.</h2>
+      <div class="grid g2 mt-l">
+        <div>
+          <h3>Architecture described by the team</h3>
           <ul class="check mt-s">
-            <li><strong>Brokers &amp; wealth platforms</strong> — embed VroomStocks research inside your app; we bring the analysis, you bring the distribution.</li>
-            <li><strong>RIAs, research houses &amp; AMCs</strong> — white-labelled screening, valuation and fund look-through for your clients.</li>
-            <li><strong>Fintechs &amp; data buyers</strong> — licence the normalised India + US fundamentals, filings and fund API.</li>
-            <li><strong>Content &amp; community partners</strong> — co-built newsletters and research distribution.</li>
+            <li><strong>Flask + Azure SQL</strong> on Azure App Service, custom domain, PWA-installable.</li>
+            <li><strong>Private workspaces</strong> — account-scoped watchlists and settings; isolation requires ongoing verification.</li>
+            <li><strong>Ingestion and caching</strong> — company filings, market feeds and fund disclosures, with fallback sources and cached data to reduce upstream dependence.</li>
+            <li><strong>Operations</strong> — background sync, retry tracking and telemetry. Source outages and coverage gaps remain possible.</li>
           </ul>
         </div>
-        <div class="card">
-          <span class="ico">🚀</span>
-          <h3>Join us</h3>
+        <div>
+          <h3>Evidence to bring to diligence</h3>
           <ul class="check mt-s">
-            <li><strong>Founding engineers</strong> — data platform, algo/execution, and applied AI for VroomAI.</li>
-            <li><strong>Finance &amp; research talent</strong> — to shape scoring, valuation methodology and editorial.</li>
-            <li><strong>Growth &amp; partnerships</strong> — to own the newsletter funnel and B2B pipeline.</li>
-            <li><strong>Advisors &amp; angels</strong> — capital markets, regulatory and go-to-market depth in India.</li>
+            <li><strong>Coverage and freshness</strong> by market, company, period and metric; distinguish missing data from zero.</li>
+            <li><strong>Traceability</strong> from displayed financials to filings; definitions and assumptions for derived metrics.</li>
+            <li><strong>Measured reliability</strong> — dated availability, API latency and sync success reports, not a blanket guarantee.</li>
+            <li><strong>Commercial readiness</strong> — provider rights, account isolation checks, AI evaluation and service commitments before enterprise launch.</li>
           </ul>
         </div>
       </div>
-      <div class="card mt-l">
-        <h3>What we're looking for right now</h3>
-        <p class="mt-s">Design partners for the <strong>Enterprise API</strong> and
-        <strong>broker integration</strong> tracks, and the first cohort of collaborators to build
-        newsletters, VroomAI and algo trading on top of a platform that already works.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 13 · CLOSE -->
-  <section class="slide">
-    <div class="wrap" style="display:flex;flex-direction:column;justify-content:center;min-height:70vh">
-      <div class="eyebrow">Let's talk</div>
-      <h1 style="font-size:clamp(1.9rem,4.4vw,3.4rem)">Every investor deserves<br>a research desk.</h1>
-      <p class="lead mt">We've built the hard part. Help us put it in the hands of the next hundred million investors.</p>
-      <div class="mt-l" style="display:flex;gap:.7rem;flex-wrap:wrap;align-items:center">
-        <a class="btn cta" href="https://vroomstocks.com" target="_blank" rel="noopener">Visit vroomstocks.com ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/agarwal-arjun/" target="_blank" rel="noopener">Arjun on LinkedIn ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/krati-mittal/" target="_blank" rel="noopener">Krati on LinkedIn ↗</a>
-      </div>
-      <p class="small mt-l">VroomStocks · Democratise investment analysis. Empower individuals and organisations to build conviction.</p>
+      <p class="small mt">Architecture statements are team descriptions, not an independent code or infrastructure audit.
+        No uptime, complete-coverage or absolute-isolation guarantee is asserted. A prior live capture of fundamental charts returned a market-mismatch error; that path needs rechecking before a demo.</p>
     </div>
   </section>
 
@@ -1017,7 +1140,7 @@ kbd {
 <div class="hint"><kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>T</kbd> theme · <kbd>P</kbd> print</div>
 <div id="chrome">
   <button class="btn" id="prev" aria-label="Previous slide">←</button>
-  <span id="count">1 / 13</span>
+  <span id="count">1 / 18</span>
   <button class="btn" id="next" aria-label="Next slide">→</button>
   <button class="btn" id="theme" aria-label="Toggle theme">◐</button>
 </div>
