@@ -53,20 +53,24 @@ reported a market-mismatch error; no mockup was substituted.
 ## Notes on the numbers
 
 Slide 10 compares coverage, pricing, specific research/AI and portfolio/strategy
-features, founding/launch milestones, funding, revenue, DAU and MAU. Source links and
+features, founding/launch milestones, funding, revenue and Users#. Source links and
 expandable methodology are on-slide, checked 11 October 2026. On small screens, the
 comparison table scrolls horizontally; focus it to use arrow keys without changing slides.
 
 Funding figures are named historical rounds, not cumulative totals. Revenue includes
-the reporting year and entity; Tickertape's historical MAU is dated November 2021.
+the reporting year and entity. Users# uses platform-stated user counts, not active-user
+metrics: Tickertape states 6m+ "trusted users" and TradingView states 100m "traders".
+These claims were observed on 11 October 2026; their definitions are not equivalent.
 `NV` means not verified in the cited public sources, not zero or necessarily undisclosed.
-VroomStocks' company/usage metrics were not provided. Founding years, product launches
+VroomStocks' May 2026 founding date and ~4K users were founder-provided on 11 October
+2026, as was the updated company filings, earnings calendar and earnings transcripts
+feature description. Funding and revenue were not provided. Founding years, product launches
 and rebrands are distinguished where known; Tickertape's conflicting histories are noted.
 Pricing is not a like-for-like entitlement comparison: Trendlyne uses an official
 help-page offer (checkout inaccessible), Fiscal.ai uses a disclosed affiliate's
 September 2026 review (official page inaccessible), and TradingView is an India offer.
-No traffic, registered-user counts, estimated revenue or parent-company metrics are
-substituted for DAU, MAU or standalone revenue.
+No traffic is substituted for user counts, and no estimated revenue or parent-company
+metrics are substituted for standalone revenue.
 
 Market statistics on slides 3 and 9 are drawn from publicly reported CDSL/NSDL, NSE, AMFI and
 SEBI figures as of mid-2026. The TAM/SAM/SOM figures are a bottom-up estimate with the
