@@ -237,6 +237,23 @@ ul.check li::before {
   text-decoration: none;
 }
 .shot-card:hover { border-color: var(--cp-accent); text-decoration: none; }
+.shot-card:focus-visible { outline: 3px solid var(--cp-accent); outline-offset: 3px; }
+#screenshot-dialog {
+  margin: auto;
+  width: min(96vw, 1600px);
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 1rem;
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  background: var(--cp-surface);
+  color: var(--cp-text);
+  box-shadow: var(--cp-shadow);
+}
+#screenshot-dialog::backdrop { background: rgba(0, 0, 0, .8); }
+.screenshot-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
+#screenshot-title { margin: 0; font-size: 1rem; }
+#screenshot-image { display: block; width: 100%; height: auto; max-height: 78vh; object-fit: contain; }
 .shot-card img {
   display: block;
   width: 100%;
@@ -377,7 +394,8 @@ kbd {
 /* ---------- Print ---------- */
 @media print {
   body { overflow: visible; background: #fff; }
-  #bar, #chrome, #dots, .hint, #brand { display: none !important; }
+  #bar, #chrome, #dots, .hint, #brand, #screenshot-dialog { display: none !important; }
+  #screenshot-dialog::backdrop { display: none; }
   #deck { height: auto; }
   .slide { display: block !important; position: relative; page-break-after: always; min-height: 100vh; padding: 2rem; }
 }
@@ -561,52 +579,52 @@ kbd {
       <div class="eyebrow">What's built so far · product in action</div>
       <h2>Not mockups — live screens from<br><span style="color:var(--cp-accent)">vroomstocks.com</span></h2>
       <div class="grid g4 mt shot-grid">
-        <a class="shot-card" href="assets/screenshots/watchlist.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/watchlist.png" aria-haspopup="dialog">
           <img src="assets/screenshots/watchlist.png" alt="Watchlist with Q-Score and 75+ metrics">
           <span class="shot-cap">Stocks &amp; watchlists</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/financials.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/financials.png" aria-haspopup="dialog">
           <img src="assets/screenshots/financials.png" alt="Quarterly income statement from XBRL filings">
           <span class="shot-cap">Financial statements</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/valuation-dcf.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/valuation-dcf.png" aria-haspopup="dialog">
           <img src="assets/screenshots/valuation-dcf.png" alt="DCF valuation matrix with intrinsic value and upside">
           <span class="shot-cap">Valuation &amp; DCF</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/technical-charts.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/technical-charts.png" aria-haspopup="dialog">
           <img src="assets/screenshots/technical-charts.png" alt="Technical chart with moving averages">
           <span class="shot-cap">Technicals &amp; charting</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/stock-screener.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/stock-screener.png" aria-haspopup="dialog">
           <img src="assets/screenshots/stock-screener.png" alt="Stock screener with India universe and custom filters">
           <span class="shot-cap">Screeners</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/mutual-funds-portfolio.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/mutual-funds-portfolio.png" aria-haspopup="dialog">
           <img src="assets/screenshots/mutual-funds-portfolio.png" alt="Mutual fund portfolio holdings imported from CAS">
           <span class="shot-cap">Mutual funds &amp; portfolio</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/options-analytics.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/options-analytics.png" aria-haspopup="dialog">
           <img src="assets/screenshots/options-analytics.png" alt="AAPL US options analytics with open interest by strike">
           <span class="shot-cap">Options analytics · US example</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/ai-insight.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/ai-insight.png" aria-haspopup="dialog">
           <img src="assets/screenshots/ai-insight.png" alt="AI-generated fundamentals insight grounded in filings">
           <span class="shot-cap">AI Insight</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/strategy-backtest.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/strategy-backtest.png" aria-haspopup="dialog">
           <img src="assets/screenshots/strategy-backtest.png" alt="Backtest comparing nine strategies against buy and hold">
           <span class="shot-cap">Strategy &amp; simulation</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/earnings-call.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/earnings-call.png" aria-haspopup="dialog">
           <img src="assets/screenshots/earnings-call.png" alt="AI-summarised earnings call with key points and guidance">
           <span class="shot-cap">Earnings call summaries</span>
         </a>
-        <a class="shot-card" href="assets/screenshots/email-alerts.png" target="_blank" rel="noopener">
+        <a class="shot-card" href="assets/screenshots/email-alerts.png" aria-haspopup="dialog">
           <img src="assets/screenshots/email-alerts.png" alt="Configured email alerts across price, technical and fundamental triggers">
           <span class="shot-cap">Email alerts</span>
         </a>
       </div>
-      <p class="small mt">Captured live from a signed-in account, October 2026. Click any screenshot to view full size.</p>
+      <p class="small mt">Captured live from a signed-in account, October 2026. Click any screenshot to enlarge it in a popup. Press Escape to close.</p>
     </div>
   </section>
 
@@ -835,6 +853,14 @@ kbd {
 
 </main>
 
+<dialog id="screenshot-dialog" aria-labelledby="screenshot-title">
+  <div class="screenshot-header">
+    <h2 id="screenshot-title">Product screenshot</h2>
+    <button class="btn" id="screenshot-close" type="button" autofocus>Close</button>
+  </div>
+  <img id="screenshot-image" alt="">
+</dialog>
+
 <div id="dots"></div>
 <div class="hint"><kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>T</kbd> theme · <kbd>P</kbd> print</div>
 <div id="chrome">
@@ -850,7 +876,29 @@ kbd {
   const dots = document.getElementById("dots");
   const bar = document.getElementById("bar");
   const count = document.getElementById("count");
+  const screenshotDialog = document.getElementById("screenshot-dialog");
+  const screenshotImage = document.getElementById("screenshot-image");
+  const screenshotTitle = document.getElementById("screenshot-title");
   let i = 0;
+
+  document.querySelectorAll(".shot-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      e.preventDefault();
+      screenshotImage.src = card.href;
+      screenshotImage.alt = card.querySelector("img").alt;
+      screenshotTitle.textContent = card.querySelector(".shot-cap").textContent;
+      screenshotDialog.showModal();
+    });
+  });
+  document.getElementById("screenshot-close").addEventListener("click", () => screenshotDialog.close());
+  screenshotDialog.addEventListener("click", (e) => {
+    const bounds = screenshotDialog.getBoundingClientRect();
+    if (e.target === screenshotDialog &&
+        (e.clientX < bounds.left || e.clientX > bounds.right ||
+         e.clientY < bounds.top || e.clientY > bounds.bottom)) {
+      screenshotDialog.close();
+    }
+  });
 
   slides.forEach((_, n) => {
     const b = document.createElement("button");
@@ -879,6 +927,7 @@ kbd {
   }
 
   document.addEventListener("keydown", (e) => {
+    if (screenshotDialog.open) return;
     if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); go(i + 1); }
     else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(i - 1); }
     else if (e.key === "Home") { e.preventDefault(); go(0); }
@@ -888,8 +937,9 @@ kbd {
   });
 
   let x0 = null;
-  document.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, { passive: true });
+  document.addEventListener("touchstart", (e) => { x0 = screenshotDialog.open ? null : e.changedTouches[0].clientX; }, { passive: true });
   document.addEventListener("touchend", (e) => {
+    if (screenshotDialog.open) { x0 = null; return; }
     if (x0 === null) return;
     const dx = e.changedTouches[0].clientX - x0;
     if (Math.abs(dx) > 60) go(dx < 0 ? i + 1 : i - 1);

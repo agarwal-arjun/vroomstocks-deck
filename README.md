@@ -26,8 +26,10 @@ An HTML presentation covering VroomStocks: vision, product, roadmap, market and 
 ## Usage
 
 Open `index.html` in any browser — no build step or runtime dependencies are needed.
-Keep `assets/screenshots` alongside it; the gallery uses these local images and links
-each thumbnail to its full-size capture.
+Keep `assets/screenshots` alongside it; each gallery thumbnail opens its capture in
+an in-page popup. Close it with Escape, the Close button, or a click outside the popup.
+Keyboard focus stays inside the popup and returns to the thumbnail on close; deck
+keyboard and swipe navigation pause while it is open.
 
 | Key | Action |
 |---|---|
