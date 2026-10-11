@@ -63,13 +63,10 @@ of a weekly digest dated 5 October 2026, showing 14 updates across one alert.
 It is not a newly generated or independently delivery-tested email. It is embedded
 on slide 7 and opens in the same screenshot popup as website captures.
 
-`assets/screenshots/notifications.png` shows the live top-right notification drawer in light theme,
-captured on 11 October 2026 after the user signed in directly in a temporary browser.
-The user's original dark-theme preference was restored after capture.
-It displays a price-move notification. Only the empty lower portion of the drawer
-was cropped; its content and colours were not altered. No credentials or authentication
-state were saved by the capture script. The notification bell is hidden in the
-signed-out, read-only workspace.
+`assets/screenshots/notifications.png` is the unmodified notification screenshot
+supplied by the user on 11 October 2026, replacing the earlier automated capture.
+It shows an ASTS price-move update in the top-right notification drawer.
+The notification bell is hidden in the signed-out, read-only workspace.
 
 Slide 8 adds a full capability overview with 12 website/official-guide screenshots
 and descriptions covering workspace, screeners, financials and ratios, Visual,
