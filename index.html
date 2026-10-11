@@ -273,6 +273,10 @@ ul.check li::before {
 .journey-grid .shot-card .shot-cap { font-size: .85rem; }
 .journey-grid p { margin-top: .8rem; font-size: .9rem; }
 .journey-grid > div { min-width: 0; }
+#monitoring-journeys .shot-card img { height: 280px; }
+.capability-grid > div { min-width: 0; }
+.capability-grid .shot-card img { height: 76px; }
+.capability-grid p { margin-top: .45rem; font-size: .78rem; line-height: 1.4; }
 @media (min-width: 901px) and (max-height: 850px) {
   .shot-card img { height: 100px; }
   .shot-card .shot-cap { padding: .4rem .55rem; font-size: .72rem; }
@@ -623,31 +627,136 @@ kbd {
   <!-- 7 - MONITORING-JOURNEYS -->
   <section class="slide" id="monitoring-journeys">
     <div class="wrap">
-      <div class="eyebrow">Product in action · ownership + monitoring</div>
-      <h2>Understand what you own.<br>Notice what changes.</h2>
-      <div class="grid g2 mt journey-grid">
+      <div class="eyebrow">Product in action · watchlists + email + notifications</div>
+      <h2>Follow your watchlist.<br>Stay informed in your inbox and in-app.</h2>
+      <div class="grid g3 mt journey-grid">
         <div>
-          <a class="shot-card" href="assets/screenshots/mutual-funds-portfolio.png" aria-haspopup="dialog">
-            <img src="assets/screenshots/mutual-funds-portfolio.png" alt="Live mutual fund portfolio with imported holdings">
-            <span class="shot-cap">Fund journey · CAS import → holdings → look-through</span>
+          <a class="shot-card" href="assets/screenshots/watchlist.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/watchlist.png" alt="Signed-in VroomStocks watchlist with Q-Score and financial metrics">
+            <span class="shot-cap">1 · Track companies in your watchlist</span>
           </a>
-          <p>Import your fund holdings, track NAV-based value and gain/loss, then inspect the businesses held by each fund.</p>
+          <p>Keep the companies you follow together, compare financial metrics and configure alerts for the changes that matter.</p>
         </div>
         <div>
-          <a class="shot-card" href="assets/screenshots/email-alerts.png" aria-haspopup="dialog">
-            <img src="assets/screenshots/email-alerts.png" alt="Live email alert configuration for research monitoring">
-            <span class="shot-cap">Monitoring journey · saved screen → rule → digest</span>
+          <a class="shot-card" href="assets/screenshots/email-digest-sample.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/email-digest-sample.png" alt="User-supplied weekly email digest dated 5 October 2026 with USA watchlist shareholding and insider activity">
+            <span class="shot-cap">2 · Read the weekly digest · supplied email sample</span>
           </a>
-          <p>Follow changes in a saved screen or watchlist. Configure a cadence and receive a combined digest when there is something to report.</p>
+          <p>This sample shows 14 updates across one alert, including USA watchlist shareholding and insider activity, with links back to VroomStocks.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/notifications.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/notifications.png" alt="Live top-right notification drawer showing an ASTS price-move update">
+            <span class="shot-cap">3 · Check in-app notifications · live capture</span>
+          </a>
+          <p>The top-right notification panel keeps updates inside the workspace. This live example shows a price-move notification.</p>
         </div>
       </div>
-      <p class="small mt">Signed-in captures, Oct 2026; the alert image shows configuration, not proof of delivery.
-        <a href="https://vroomstocks.com/research/alerts" target="_blank" rel="noopener">Documented alert behaviour</a> includes stock/fund screener changes, price, signals, insider/shareholding and earnings updates.
-        Click to enlarge; the complete gallery is in the appendix.</p>
+      <p class="small mt">Watchlist: signed-in website capture, Oct 2026. Email: user-supplied screenshot dated 5 Oct 2026,
+        not a newly generated or independently delivery-tested email. Notification panel: captured live 11 Oct 2026; empty lower space cropped.
+        These are separate examples, not a matched event sequence. Click any image to enlarge.
+        <a href="https://vroomstocks.com/research/alerts" target="_blank" rel="noopener">Alert capabilities and cadence</a>.</p>
     </div>
   </section>
 
-  <!-- 8 - TRACTION -->
+  <!-- 8 - FULL-CAPABILITIES -->
+  <section class="slide dense" id="full-capabilities">
+    <div class="wrap">
+      <div class="eyebrow">Full product capability overview</div>
+      <h2>The complete research workspace.</h2>
+      <div class="grid g4 mt capability-grid">
+        <div>
+          <a class="shot-card" href="assets/screenshots/watchlist.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/watchlist.png" alt="Website watchlist showing company scores and financial metrics">
+            <span class="shot-cap">Watchlists &amp; workspace</span>
+          </a>
+          <p>Named lists, Q-Score, company overview, metric templates and synced preferences.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/stock-screener.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/stock-screener.png" alt="Website stock screener with saved screens and financial filters">
+            <span class="shot-cap">Stock &amp; fund screening</span>
+          </a>
+          <p>Equity and Indian fund screens; saved filters and membership-change alerts.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/financials.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/financials.png" alt="Website financial statements arranged by reporting period">
+            <span class="shot-cap">Financials &amp; ratios</span>
+          </a>
+          <p>Statements, ratios and segments; annual, quarterly, biannual, LTM and YoY views.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/visual-comparison.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/visual-comparison.png" alt="Official website guide showing Visual multi-company ratio comparisons">
+            <span class="shot-cap">Visual comparisons · guide capture</span>
+          </a>
+          <p>Up to six companies, financial metrics, period controls, chart styles and saved views.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/valuation-dcf.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/valuation-dcf.png" alt="Website DCF valuation workbench">
+            <span class="shot-cap">Valuation &amp; DCF</span>
+          </a>
+          <p>Editable DCF, scenario comparisons, margin of safety and priced-in growth.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/technical-charts.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/technical-charts.png" alt="Website technical chart with price history and indicators">
+            <span class="shot-cap">Technical &amp; fundamental charts</span>
+          </a>
+          <p>Price, indicators and business trends. Technical example shown; ProCharts is beta.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/options-analytics.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/options-analytics.png" alt="Website US options analytics with open interest by strike">
+            <span class="shot-cap">Options analytics</span>
+          </a>
+          <p>Open interest, IV, gamma, max pain and put/call ratios; India coverage varies.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/mutual-funds-portfolio.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/mutual-funds-portfolio.png" alt="Website mutual fund portfolio with CAS-imported holdings">
+            <span class="shot-cap">Mutual funds &amp; CAS import</span>
+          </a>
+          <p>CAS import, NAV-based value and gain/loss, holdings look-through and company quality.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/ai-insight.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/ai-insight.png" alt="Website AI Insight explaining company fundamentals">
+            <span class="shot-cap">AI Insight</span>
+          </a>
+          <p>Valuation, fundamentals, technicals and options summaries. Verify AI against sources.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/earnings-call.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/earnings-call.png" alt="Website earnings call summary with quarter selection">
+            <span class="shot-cap">Earnings, filings &amp; ownership</span>
+          </a>
+          <p>Earnings calendar, transcripts, summaries, filings, announcements and ownership data.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/strategy-backtest.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/strategy-backtest.png" alt="Website backtest comparing strategies with buy and hold">
+            <span class="shot-cap">Backtests &amp; paper trading</span>
+          </a>
+          <p>Backtests, strategy analytics and forward paper trading. No live order execution.</p>
+        </div>
+        <div>
+          <a class="shot-card" href="assets/screenshots/email-alerts.png" aria-haspopup="dialog">
+            <img src="assets/screenshots/email-alerts.png" alt="Website alert configuration for research updates">
+            <span class="shot-cap">Alerts &amp; monitoring</span>
+          </a>
+          <p>Scheduled price, signal, screener, ownership and earnings digests; notification bell.</p>
+        </div>
+      </div>
+      <p class="small mt">Click any screen to enlarge. Website captures: Oct 2026; Visual is from the
+        <a href="https://vroomstocks.com/learn/getting-started" target="_blank" rel="noopener">official guide</a>.
+        Screens illustrate each feature group, not every listed function. Coverage and plan limits vary; this is not a new end-to-end verification of all capabilities.</p>
+    </div>
+  </section>
+
+  <!-- 9 - TRACTION -->
   <section class="slide" id="traction">
     <div class="wrap">
       <div class="eyebrow">Early traction · as of 11 October 2026</div>
@@ -666,7 +775,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 9 - BUSINESS-MODEL -->
+  <!-- 10 - BUSINESS-MODEL -->
   <section class="slide dense" id="business-model">
     <div class="wrap">
       <div class="eyebrow">Business model · live retail pricing</div>
@@ -707,7 +816,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 10 - ROADMAP -->
+  <!-- 11 - ROADMAP -->
   <section class="slide dense" id="roadmap">
     <div class="wrap">
       <div class="eyebrow">Roadmap</div>
@@ -755,7 +864,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 11 - MARKET -->
+  <!-- 12 - MARKET -->
   <section class="slide dense" id="market">
     <div class="wrap">
       <div class="eyebrow">Market · India</div>
@@ -796,7 +905,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 12 - POSITIONING -->
+  <!-- 13 - POSITIONING -->
   <section class="slide" id="positioning">
     <div class="wrap">
       <div class="eyebrow">Competitive positioning · India + global</div>
@@ -814,7 +923,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 13 - TEAM -->
+  <!-- 14 - TEAM -->
   <section class="slide" id="team">
     <div class="wrap">
       <div class="eyebrow">Who we are</div>
@@ -862,7 +971,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 14 - ASK -->
+  <!-- 15 - ASK -->
   <section class="slide" id="ask">
     <div class="wrap">
       <div class="eyebrow">The ask</div>
@@ -898,7 +1007,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 15 - CLOSE -->
+  <!-- 16 - CLOSE -->
   <section class="slide" id="close">
     <div class="wrap" style="display:flex;flex-direction:column;justify-content:center;min-height:70vh">
       <div class="eyebrow">Let's talk</div>
@@ -915,7 +1024,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 16 - SCREENSHOT-GALLERY -->
+  <!-- 17 - SCREENSHOT-GALLERY -->
   <section class="slide dense" id="screenshot-gallery">
     <div class="wrap">
       <div class="eyebrow">Appendix · product gallery</div>
@@ -976,7 +1085,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 17 - COMPETITOR-ANALYSIS -->
+  <!-- 18 - COMPETITOR-ANALYSIS -->
   <section class="slide dense" id="competitor-analysis">
     <div class="wrap">
       <div class="eyebrow">Appendix · competitive landscape · India + global</div>
@@ -1096,7 +1205,7 @@ kbd {
     </div>
   </section>
 
-  <!-- 18 - ENGINEERING -->
+  <!-- 19 - ENGINEERING -->
   <section class="slide" id="engineering">
     <div class="wrap">
       <div class="eyebrow">Appendix · data platform and diligence</div>
@@ -1140,7 +1249,7 @@ kbd {
 <div class="hint"><kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>T</kbd> theme · <kbd>P</kbd> print</div>
 <div id="chrome">
   <button class="btn" id="prev" aria-label="Previous slide">←</button>
-  <span id="count">1 / 18</span>
+  <span id="count">1 / 19</span>
   <button class="btn" id="next" aria-label="Next slide">→</button>
   <button class="btn" id="theme" aria-label="Toggle theme">◐</button>
 </div>
